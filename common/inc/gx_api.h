@@ -143,9 +143,9 @@ extern   "C" {
 #define AZURE_RTOS_GUIX
 #define GUIX_MAJOR_VERSION  6
 #define GUIX_MINOR_VERSION  4
-#define GUIX_PATCH_VERSION  3
-#define GUIX_BUILD_VERSION  202503
-#define GUIX_HOTFIX_VERSION ''
+#define GUIX_PATCH_VERSION  5
+#define GUIX_BUILD_VERSION  202504
+#define GUIX_HOTFIX_VERSION ' '
 
 /* The following symbols are defined for backward compatibility reasons.*/
 #define __PRODUCT_GUIX__
