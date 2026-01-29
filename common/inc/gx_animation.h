@@ -52,6 +52,7 @@
 #ifndef GX_ANIMATION_H
 #define GX_ANIMATION_H
 
+#if (GX_ANIMATION_POOL_SIZE > 0)
 #define GX_ANIMATION_SLIDE_LEFT       0x0001
 #define GX_ANIMATION_SLIDE_RIGHT      0x0002
 #define GX_ANIMATION_SLIDE_UP         0x0040
@@ -91,5 +92,6 @@ UINT _gxe_animation_stop(GX_ANIMATION *animation);
 
 UINT _gxe_animation_landing_speed_set(GX_ANIMATION *animation, USHORT shift_per_step);
 
+#endif
 #endif
 

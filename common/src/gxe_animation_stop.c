@@ -73,6 +73,7 @@ GX_CALLER_CHECKING_EXTERNS
 /*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT _gxe_animation_stop(GX_ANIMATION *animation)
 {
     /* Check for appropriate caller.  */
@@ -90,4 +91,4 @@ UINT _gxe_animation_stop(GX_ANIMATION *animation)
 
     return _gx_animation_stop(animation);
 }
-
+#endif

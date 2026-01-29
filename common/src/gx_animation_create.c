@@ -70,6 +70,7 @@
 /*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT  _gx_animation_create(GX_ANIMATION *animation)
 {
     memset(animation, 0, sizeof(GX_ANIMATION));
@@ -79,4 +80,4 @@ UINT  _gx_animation_create(GX_ANIMATION *animation)
     /* Return completion status code. */
     return(GX_SUCCESS);
 }
-
+#endif

@@ -73,6 +73,7 @@ GX_CALLER_CHECKING_EXTERNS
 /*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT _gxe_animation_drag_disable(GX_ANIMATION *animation, GX_WIDGET *widget)
 {
     /* Check for appropriate caller.  */
@@ -92,4 +93,4 @@ UINT _gxe_animation_drag_disable(GX_ANIMATION *animation, GX_WIDGET *widget)
 
     return _gx_animation_drag_disable(animation, widget);
 }
-
+#endif

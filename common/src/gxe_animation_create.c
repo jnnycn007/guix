@@ -66,6 +66,7 @@
 /*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT  _gxe_animation_create(GX_ANIMATION *animation)
 {
 UINT status;
@@ -87,4 +88,4 @@ UINT status;
     /* Return completion status.  */
     return(status);
 }
-
+#endif

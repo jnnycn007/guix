@@ -76,6 +76,7 @@
 /*                                            resulting in version 6.1.3  */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT _gx_animation_stop(GX_ANIMATION *animation)
 {
 UINT          status = GX_SUCCESS;
@@ -123,4 +124,4 @@ GX_ANIMATION *previous;
     GX_EXIT_CRITICAL
     return(status);
 }
-
+#endif

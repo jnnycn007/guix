@@ -79,6 +79,7 @@
 /*                                            resulting in version 6.1.11 */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT  _gx_animation_slide_landing(GX_ANIMATION *animation)
 {
 GX_ANIMATION_INFO *info = &animation -> gx_animation_info;
@@ -296,4 +297,4 @@ GX_VALUE           border_width;
     /* Return completion status code. */
     return(GX_SUCCESS);
 }
-
+#endif

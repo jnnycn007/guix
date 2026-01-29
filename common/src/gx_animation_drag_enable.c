@@ -71,6 +71,7 @@
 /*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT  _gx_animation_drag_enable(GX_ANIMATION *animation, GX_WIDGET *widget, GX_ANIMATION_INFO *info)
 {
     /* Test invalid animation status. */
@@ -93,4 +94,4 @@ UINT  _gx_animation_drag_enable(GX_ANIMATION *animation, GX_WIDGET *widget, GX_A
     /* Return completion status code. */
     return(GX_SUCCESS);
 }
-
+#endif

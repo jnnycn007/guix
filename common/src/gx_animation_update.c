@@ -81,6 +81,7 @@
 /*                                            resulting in version 6.1.11 */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 VOID _gx_animation_update(VOID)
 {
 GX_ANIMATION      *animation;
@@ -245,4 +246,4 @@ GX_RECTANGLE       block;
         animation = next;
     }
 }
-
+#endif

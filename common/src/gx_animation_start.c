@@ -85,6 +85,7 @@
 /*                                            resulting in version 6.1.3  */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT _gx_animation_start(GX_ANIMATION *animation, GX_ANIMATION_INFO *info)
 {
 UINT            status = GX_SUCCESS;
@@ -207,4 +208,4 @@ GX_VALUE top;
 
     return(status);
 }
-
+#endif

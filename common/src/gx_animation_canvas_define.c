@@ -73,6 +73,7 @@
 /*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT  _gx_animation_canvas_define(GX_ANIMATION *animation, GX_CANVAS *canvas)
 {
     if (animation -> gx_animation_status != GX_ANIMATION_IDLE)
@@ -85,4 +86,4 @@ UINT  _gx_animation_canvas_define(GX_ANIMATION *animation, GX_CANVAS *canvas)
     /* Return completion status code. */
     return(GX_SUCCESS);
 }
-
+#endif

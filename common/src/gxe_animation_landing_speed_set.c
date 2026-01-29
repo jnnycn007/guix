@@ -70,6 +70,7 @@
 /*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT _gxe_animation_landing_speed_set(GX_ANIMATION *animation, USHORT shift_per_step)
 {
     /* Check for invalid input pointers.  */
@@ -85,4 +86,4 @@ UINT _gxe_animation_landing_speed_set(GX_ANIMATION *animation, USHORT shift_per_
 
     return _gx_animation_landing_speed_set(animation, shift_per_step);
 }
-
+#endif

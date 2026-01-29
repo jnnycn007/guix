@@ -73,6 +73,7 @@
 /*                                            resulting in version 6.1.11 */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT  _gx_animation_drag_tracking_start(GX_ANIMATION *animation, GX_POINT penpos)
 {
 GX_ANIMATION_INFO *info;
@@ -305,4 +306,4 @@ VOID               (*active_display_area_set)(INT layer, GX_RECTANGLE *size);
     /* Return completion status code. */
     return(GX_SUCCESS);
 }
-
+#endif

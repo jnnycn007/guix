@@ -73,6 +73,7 @@
 /*                                            resulting in version 6.1.11 */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT  _gx_animation_slide_landing_start(GX_ANIMATION *animation)
 {
 GX_ANIMATION_INFO *info;
@@ -119,4 +120,4 @@ GX_RECTANGLE      *target_size;
     /* Return completion status code. */
     return(GX_SUCCESS);
 }
-
+#endif

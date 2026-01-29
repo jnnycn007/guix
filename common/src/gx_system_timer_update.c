@@ -127,10 +127,12 @@ GX_ENTER_CRITICAL
         current_timer = next_timer;
     }
 
+#if (GX_ANIMATION_POOL_SIZE > 0)
     if (_gx_system_animation_list)
     {
         _gx_animation_update();
     }
+#endif
 
     /* release our lock */
     GX_EXIT_CRITICAL

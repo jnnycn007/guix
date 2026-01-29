@@ -70,6 +70,7 @@
 /*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT  _gx_animation_drag_disable(GX_ANIMATION *animation, GX_WIDGET *widget)
 {
 UINT status;
@@ -82,4 +83,4 @@ UINT status;
     status =  _gx_animation_stop(animation);
     return status;
 }
-
+#endif

@@ -72,6 +72,7 @@
 /*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT  _gxe_animation_canvas_define(GX_ANIMATION *animation, GX_CANVAS *canvas)
 {
 UINT  status = GX_SUCCESS;
@@ -103,4 +104,4 @@ ULONG required_size;
     /* Return completion status code. */
     return(status);
 }
-
+#endif

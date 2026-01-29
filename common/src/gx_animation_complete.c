@@ -71,6 +71,7 @@
 /*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 VOID _gx_animation_complete_event_send(GX_ANIMATION *animation)
 {
 GX_EVENT complete_event;
@@ -93,7 +94,7 @@ GX_EVENT complete_event;
         _gx_system_event_send(&complete_event);
     }
 }
-
+#endif
 
 
 /**************************************************************************/
@@ -146,7 +147,7 @@ GX_EVENT complete_event;
 /*                                            resulting in version 6.1.3  */
 /*                                                                        */
 /**************************************************************************/
-
+#if (GX_ANIMATION_POOL_SIZE > 0)
 VOID _gx_animation_complete(GX_ANIMATION *animation)
 {
 GX_WIDGET *target;
@@ -255,4 +256,4 @@ GX_VALUE   yshift;
         _gx_system_animation_free(animation);
     }
 }
-
+#endif

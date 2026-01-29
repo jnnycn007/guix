@@ -69,6 +69,7 @@ GX_CALLER_CHECKING_EXTERNS
 /*  06-02-2021     Ting Zhu                 Initial Version 6.1.7         */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT _gxe_animation_delete(GX_ANIMATION *target, GX_WIDGET *parent)
 {
     /* Check for appropriate caller.  */
@@ -81,4 +82,4 @@ UINT _gxe_animation_delete(GX_ANIMATION *target, GX_WIDGET *parent)
 
     return _gx_animation_delete(target, parent);
 }
-
+#endif

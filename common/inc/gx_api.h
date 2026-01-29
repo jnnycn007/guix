@@ -5714,8 +5714,10 @@ UINT _gxe_string_scroll_wheel_string_list_set_ext(GX_STRING_SCROLL_WHEEL *wheel,
                                                   INT string_count);
 
 UINT _gxe_system_active_language_set(GX_UBYTE language);
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT _gxe_system_animation_get(GX_ANIMATION **animation);
 UINT _gxe_system_animation_free(GX_ANIMATION *animation);
+#endif
 #if defined(GX_DYNAMIC_BIDI_TEXT_SUPPORT)
 UINT _gx_system_bidi_text_enable(VOID);
 UINT _gx_system_bidi_text_disable(VOID);

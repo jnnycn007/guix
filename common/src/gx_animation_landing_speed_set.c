@@ -70,6 +70,7 @@
 /*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT  _gx_animation_landing_speed_set(GX_ANIMATION *animation, USHORT shift_per_step)
 {
     animation -> gx_animation_landing_speed = shift_per_step;
@@ -77,4 +78,4 @@ UINT  _gx_animation_landing_speed_set(GX_ANIMATION *animation, USHORT shift_per_
     /* Return completion status code. */
     return(GX_SUCCESS);
 }
-
+#endif

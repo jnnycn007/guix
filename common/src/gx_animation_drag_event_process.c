@@ -85,6 +85,7 @@
 /*                                            resulting in version 6.1.8  */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 static UINT  _gx_animation_drag_event_check(GX_ANIMATION *animation, GX_EVENT *event_ptr)
 {
 GX_ANIMATION_INFO *info = &animation -> gx_animation_info;
@@ -277,6 +278,7 @@ INT                shift;
 
     return GX_SUCCESS;
 }
+#endif
 
 /**************************************************************************/
 /*                                                                        */
@@ -320,6 +322,7 @@ INT                shift;
 /*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT  _gx_animation_drag_event_process(GX_WIDGET *widget, GX_EVENT *event_ptr)
 {
 GX_ANIMATION *animation;
@@ -342,4 +345,4 @@ GX_ANIMATION *animation;
 
     return GX_SUCCESS;
 }
-
+#endif

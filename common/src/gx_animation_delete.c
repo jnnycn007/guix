@@ -71,7 +71,7 @@
 /*  06-02-2021     Ting Zhu                 Initial Version 6.1.7         */
 /*                                                                        */
 /**************************************************************************/
-
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT _gx_animation_delete(GX_ANIMATION *target, GX_WIDGET *parent)
 {
 GX_ANIMATION *animation;
@@ -122,4 +122,4 @@ GX_ANIMATION *next;
 
     return(GX_SUCCESS);
 }
-
+#endif

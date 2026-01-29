@@ -78,6 +78,7 @@
 /*                                            resulting in version 6.1.11 */
 /*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT  _gx_animation_drag_tracking(GX_ANIMATION *animation, GX_POINT penpos)
 {
 GX_VALUE     delta_x = 0;
@@ -221,4 +222,4 @@ GX_VALUE     border_width;
     /* Return completion status code. */
     return(GX_SUCCESS);
 }
-
+#endif
