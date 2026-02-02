@@ -64,7 +64,7 @@
 /*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
 /*                                                                        */
 /**************************************************************************/
-UINT _gx_rich_text_view_context_reset()
+UINT _gx_rich_text_view_context_reset(VOID)
 {
     _gx_system_rich_text_context_stack.gx_rich_text_context_stack_top = 0;
 
