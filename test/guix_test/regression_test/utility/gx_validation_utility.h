@@ -31,7 +31,7 @@ VOID gx_validation_application_define(void *);
 
 void gx_validation_setup(int argc, char **argv);
 
-/* gx_validation_create_output_file is called from the validation driver toggle routine 
+/* gx_validation_create_output_file is called from the validation driver toggle routine
    to create the output file, and to record the color depth, width, height */
 int  gx_validation_create_output_file(char *color_depth, int width, int height);
 
@@ -42,7 +42,7 @@ int  gx_validation_create_frame_buffer(int frame_size);
 /* gx_validation_write_frame_write is called from the validation driver toggle routine */
 void gx_validation_write_frame_buffer(void);
 
-/* gx_validation_validate_data_frame is called from the frame work to validate the output.  
+/* gx_validation_validate_data_frame is called from the frame work to validate the output.
    It also indicates the beginning of a frame. */
 int  gx_validation_validate_data_frame(char *golden_file, char *test_output);
 

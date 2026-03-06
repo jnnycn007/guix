@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -61,18 +62,8 @@
 /*                                                                        */
 /*    Application Code                                                    */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  04-25-2022     Ting Zhu                 Modified comment(s),          */
-/*                                            added canvas support,       */
-/*                                            resulting in version 6.1.11 */
-/*                                                                        */
 /**************************************************************************/
+#if (GX_ANIMATION_POOL_SIZE > 0)
 UINT  _gx_animation_slide_landing_start(GX_ANIMATION *animation)
 {
 GX_ANIMATION_INFO *info;
@@ -119,4 +110,4 @@ GX_RECTANGLE      *target_size;
     /* Return completion status code. */
     return(GX_SUCCESS);
 }
-
+#endif

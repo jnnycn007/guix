@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -32,12 +33,6 @@
 /*                                                                        */
 /*    This file contains data type definitions and constants that work    */
 /*    with the Renesas CCRX compiler.                                     */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  10-15-2021     Kenneth Maxwell          Initial Version 6.1.9         */
 /*                                                                        */
 /**************************************************************************/
 
@@ -145,7 +140,7 @@ typedef unsigned char GX_UCHAR;
 
 #ifdef GX_SYSTEM_INIT
 CHAR _gx_version_id[] =
-    "Copyright (c) 2024 Microsoft Corporation.  *  GUIX Version 6.4.1 *";
+    "(c) 2024 Microsoft Corp. (c) 2026-present Eclipse ThreadX Contributors.  *  GUIX  Version 6.5.0.202601 *";
 #else
 extern  CHAR _gx_version_id[];
 #endif

@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -66,14 +67,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_canvas_glyph_draw                                               */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_canvas_kerning_glyphs_draw(GX_DRAW_CONTEXT *context, GX_FONT *font, GX_POINT *draw_position, GX_CONST GX_STRING *string, GX_RECTANGLE *view,
@@ -252,14 +245,6 @@ UINT ret;
 /*                                                                        */
 /*    _gx_canvas_glyph_draw                                               */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_canvas_compressed_glyphs_draw(GX_DRAW_CONTEXT *context, GX_FONT *font, GX_POINT *draw_position, GX_CONST GX_STRING *string, GX_RECTANGLE *view,
                                               VOID (*draw_glyph)(GX_DRAW_CONTEXT *, GX_RECTANGLE *, GX_POINT *, GX_CONST GX_GLYPH *))
@@ -432,14 +417,6 @@ UINT          index = 0;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_canvas_glyph_draw                                               */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_canvas_generic_glyphs_draw(GX_DRAW_CONTEXT *context, GX_FONT *font, GX_POINT *draw_position, GX_CONST GX_STRING *string, GX_RECTANGLE *view,
@@ -620,14 +597,6 @@ UINT          index = 0;
 /*    _gx_canvas_compressed_glyphs_draw                                   */
 /*    _gx_canvas_kerning_glyphs_draw                                      */
 /*    _gx_canvas_generic_glyphs_draw                                      */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 VOID _gx_canvas_glyphs_draw(GX_DRAW_CONTEXT *context, GX_POINT *draw_position, GX_CONST GX_STRING *string,

@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -72,15 +73,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_display_driver_32bpp_rotated_pixelmap_rotate                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  02-02-2021     Kenneth Maxwell          Initial Version 6.1.4         */
-/*  03-02-2021     Ting Zhu                 Modified comment(s), changed  */
-/*                                            blend function set macro,   */
-/*                                            resulting in version 6.1.5  */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_32bpp_rotated_pixelmap_raw_rotate(GX_DRAW_CONTEXT *context, INT xpos, INT ypos, GX_PIXELMAP *pixelmap,
@@ -364,15 +356,6 @@ VOID          (*blend_func)(GX_DRAW_CONTEXT *context, INT x, INT y, GX_COLOR fco
 /*                                                                        */
 /*    _gx_display_driver_32bpp_rotated_pixelmap_rotate                    */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  02-02-2021     Kenneth Maxwell          Initial Version 6.1.4         */
-/*  03-02-2021     Ting Zhu                 Modified comment(s), changed  */
-/*                                            blend function set macro,   */
-/*                                            resulting in version 6.1.5  */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_32bpp_rotated_pixelmap_alpha_rotate(GX_DRAW_CONTEXT *context, INT xpos, INT ypos, GX_PIXELMAP *pixelmap,
                                                                    INT angle, INT cx, INT cy)
@@ -633,15 +616,6 @@ VOID          (*blend_func)(GX_DRAW_CONTEXT *context, INT x, INT y, GX_COLOR fco
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  02-02-2021     Kenneth Maxwell          Initial Version 6.1.4         */
-/*  03-02-2021     Ting Zhu                 Modified comment(s), changed  */
-/*                                            blend function set macro,   */
-/*                                            resulting in version 6.1.5  */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_32bpp_rotated_pixelmap_simple_rotate(GX_DRAW_CONTEXT *context, INT xpos, INT ypos, GX_PIXELMAP *pixelmap,
                                                                     INT angle, INT cx, INT cy)
@@ -830,12 +804,6 @@ VOID          (*blend_func)(GX_DRAW_CONTEXT *context, INT x, INT y, GX_COLOR fco
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  02-02-2021     Kenneth Maxwell          Initial Version 6.1.4         */
 /*                                                                        */
 /**************************************************************************/
 VOID _gx_display_driver_32bpp_rotated_pixelmap_rotate(GX_DRAW_CONTEXT *context, INT xpos, INT ypos, GX_PIXELMAP *pixelmap,

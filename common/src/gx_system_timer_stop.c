@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -53,26 +54,14 @@
 /*                                                                        */
 /*  CALLS                                                                 */
 /*                                                                        */
-/*    _gx_system_lock                       lock critical section         */
-/*    _gx_system_unlock                     unlock critical section       */
+/*    GX_ENTER_CRITICAL                     lock critical section         */
+/*    GX_EXIT_CRITICAL                      unlock critical section       */
 /*    tx_timer_deactivate                   stop the ThreadX timer        */
 /*                                                                        */
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    GUIX Application                                                    */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  12-31-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added GX_DISABLE_THREADX_   */
-/*                                            TIMER_SOURCE configuration, */
-/*                                            resulting in version 6.1.3  */
 /*                                                                        */
 /**************************************************************************/
 UINT _gx_system_timer_stop(GX_WIDGET *owner, UINT timer_id)

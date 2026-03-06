@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -66,14 +67,6 @@
 /*                                                                        */
 /*    _gx_canvas_pie_draw                                                 */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 #if defined(GX_ARC_DRAWING_SUPPORT)
 
@@ -90,7 +83,7 @@ VOID _gx_display_driver_generic_pie_fill(GX_DRAW_CONTEXT *context, INT xcenter, 
         }
         else if (end_angle < 360)
         {
-            /* Skip-end parameter should only be set when drawing the above area. 
+            /* Skip-end parameter should only be set when drawing the above area.
                It would be set to GX_TRUE to skip the bottom line to avoid case that this line will be drawn twice, which
                is not correct, when brush alpha is set. */
             _gx_display_driver_generic_simple_pie_fill(context, xcenter, ycenter, r, start_angle, 180, GX_TRUE);

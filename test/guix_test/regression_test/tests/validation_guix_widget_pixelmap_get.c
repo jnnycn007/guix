@@ -34,7 +34,7 @@ VOID tx_application_define(void *first_unused_memory)
     gx_validation_watchdog_create(100);
 
     /* Create a dedicated thread to perform various operations
-       on the line drawing example. These operations simulate 
+       on the line drawing example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 
@@ -72,7 +72,7 @@ VOID sprite_screen_draw(GX_WINDOW *window)
 static GX_CHAR test_comment[256];
 
 /* This thread simulates user input.  Its priority is lower
-   than the GUIX thread, so that GUIX finishes an operation 
+   than the GUIX thread, so that GUIX finishes an operation
    before this thread is able to issue the next command. */
 static VOID control_thread_entry(ULONG input)
 {

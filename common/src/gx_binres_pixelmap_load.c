@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -59,13 +60,8 @@
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
-/*                                                                        */
 /**************************************************************************/
+#ifdef GX_BINARY_RESOURCE_SUPPORT
 UINT _gx_binres_standalone_resource_seek(GX_BINRES_DATA_INFO *info, UINT res_index)
 {
 USHORT type;
@@ -97,6 +93,7 @@ ULONG  count;
 
     return GX_SUCCESS;
 }
+#endif
 
 /**************************************************************************/
 /*                                                                        */
@@ -134,13 +131,8 @@ ULONG  count;
 /*                                                                        */
 /*    Application Code                                                    */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
-/*                                                                        */
 /**************************************************************************/
+#ifdef GX_BINARY_RESOURCE_SUPPORT
 UINT _gx_binres_pixelmap_load(GX_UBYTE *root_address, UINT map_index, GX_PIXELMAP *pixelmap)
 {
 UINT                status = GX_SUCCESS;
@@ -184,4 +176,4 @@ GX_BINRES_DATA_INFO info;
 
     return status;
 }
-
+#endif

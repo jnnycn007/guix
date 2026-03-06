@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -35,35 +36,6 @@
 /*    This file defines the GUIX Display component, including all data    */
 /*    types and external references.  It is assumed that gx_api.h and     */
 /*    gx_port.h have already been included.                               */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  12-31-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added rotated display       */
-/*                                            driver declarations,        */
-/*                                            resulting in version 6.1.3  */
-/*  02-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added 8bpp/32bpp rotated    */
-/*                                            display driver declarations,*/
-/*                                            resulting in version 6.1.4  */
-/*  03-02-2021     Ting Zhu                 Modified comment(s),          */
-/*                                            added macro                 */
-/*                                            GX_SET_32BPP_BLEND_FUNCTION,*/
-/*                                            resulting in version 6.1.5  */
-/*  01-31-2022     Ting Zhu                 Modified comment(s),          */
-/*                                            added language direction    */
-/*                                            table set declarations,     */
-/*                                            resulting in version 6.1.10 */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            removed unused prototypes,  */
-/*                                            added partial canvas buffer */
-/*                                            support,                    */
-/*                                            resulting in version 6.3.0  */
 /*                                                                        */
 /**************************************************************************/
 

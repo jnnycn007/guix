@@ -125,7 +125,7 @@ class image_reader
         static void ReadPixel24(image_reader *reader, int Index, Pixel *pPut);
         static void ReadPixel32(image_reader *reader, int Index, Pixel *pPut);
 
-        // Pixel data writers- 
+        // Pixel data writers-
         // A group of functions for writing Pixelmap output data in the requested
         // format. Only supporting 16, 24, and 32 bit formats at first.
         // FIXME: Need to add 1bpp to 8bpp formats.
@@ -155,7 +155,7 @@ class image_reader
         static Pixel WritePixel32Bit_BGRA(image_reader *reader, Pixel pPixel);
 
  
-        // Pixel data readers- 
+        // Pixel data readers-
         // A group of functions for reading Pixelmap output data back into
         // a Pixel structure. Only supporting 16, 24, and 32 bit formats at first.
         // FIXME: Need to add 1bpp to 8bpp formats.
@@ -204,7 +204,7 @@ class image_reader
         Pixel (*mpReadOutputPixel)(image_reader *reader, int);
 
         // pointer to function to write out output data format
-        // 
+        //
         // The function must increment the data and aux ptr appropriately,
         // and return the actual value written (used for dithering error)
 

@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -54,8 +55,8 @@
 /*                                                                        */
 /*  CALLS                                                                 */
 /*                                                                        */
-/*   _gx_system_lock                        Lock system mutex             */
-/*   _gx_system_unlock                      Unlock system mutex           */
+/*   GX_ENTER_CRITICAL                      Lock system mutex             */
+/*   GX_EXIT_CRITICAL                       Unlock system mutex           */
 /*   [gx_widget_event_process_function]     Event handler of timer owner  */
 /*   _gx_system_timer_stop                  Stop the system timer         */
 /*   _gx_animation_update                   Update the animation sequence */
@@ -63,14 +64,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    tx_timer                                                            */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 VOID  _gx_system_timer_update(ULONG ticks)
@@ -127,10 +120,12 @@ GX_ENTER_CRITICAL
         current_timer = next_timer;
     }
 
+#if (GX_ANIMATION_POOL_SIZE > 0)
     if (_gx_system_animation_list)
     {
         _gx_animation_update();
     }
+#endif
 
     /* release our lock */
     GX_EXIT_CRITICAL

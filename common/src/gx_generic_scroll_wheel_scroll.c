@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -70,18 +71,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  06-02-2021        Ting Zhu              Initial Version 6.1.7         */
-/*  10-31-2022        Kenneth Maxwell       Modified comment(s),          */
-/*                                            changed return type,        */
-/*                                            resulting in version 6.2.0  */
-/*  03-08-2023        Ting Zhu              Modified comment(s),          */
-/*                                            changed return type,        */
-/*                                            resulting in version 6.2.1  */
 /*                                                                        */
 /**************************************************************************/
 UINT _gx_generic_scroll_wheel_scroll(GX_GENERIC_SCROLL_WHEEL *wheel, GX_VALUE shift)

@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -55,8 +56,8 @@
 /*                                                                        */
 /*  CALLS                                                                 */
 /*                                                                        */
-/*    _gx_system_lock                       Obtain GUIX system lock       */
-/*    _gx_system_unlock                     Release GUIX system lock      */
+/*    GX_ENTER_CRITICAL                     Obtain GUIX system lock       */
+/*    GX_EXIT_CRITICAL                      Release GUIX system lock      */
 /*    _gx_first_client_child_get            Get the first client child    */
 /*    _gx_window_scrollbar_find             Find the scrollbar            */
 /*    _gx_scrollbar_reset                   Reset the schollbar           */
@@ -66,17 +67,6 @@
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  01-31-2022     Ting Zhu                 Modified comment(s),          */
-/*                                            improved logic,             */
-/*                                            resulting in version 6.1.10 */
-/*                                                                        */
 /**************************************************************************/
 UINT _gx_horizontal_list_total_columns_set(GX_HORIZONTAL_LIST *list, INT count)
 {
@@ -85,7 +75,7 @@ INT           index;
 GX_WIDGET    *test;
 GX_SCROLLBAR *pScroll;
 
-    _gx_system_lock();
+    GX_ENTER_CRITICAL
 
     /* Update total count of rows. */
     list -> gx_horizontal_list_total_columns = count;
@@ -183,7 +173,7 @@ GX_SCROLLBAR *pScroll;
         _gx_scrollbar_reset(pScroll, GX_NULL);
     }
 
-    _gx_system_unlock();
+    GX_EXIT_CRITICAL
 
     /* Refresh screen. */
     if (list -> gx_widget_status & GX_STATUS_VISIBLE)

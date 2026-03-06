@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -57,14 +58,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_gradient_create                                         */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static GX_BOOL _gx_utility_gradient_find(GX_GRADIENT *gradient)
@@ -122,14 +115,6 @@ GX_GRADIENT *search = _gx_system_gradient_list;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_gradient_create                                         */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_horizontal_alpha_gradient_create(GX_GRADIENT *gradient)
@@ -223,14 +208,6 @@ GX_UBYTE *data_start = (GX_UBYTE *)gradient -> gx_gradient_pixelmap.gx_pixelmap_
 /*                                                                        */
 /*    _gx_utility_gradient_create                                         */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_vertical_alpha_gradient_create(GX_GRADIENT *gradient)
 {
@@ -308,17 +285,6 @@ GX_UBYTE *data = (GX_UBYTE *)gradient -> gx_gradient_pixelmap.gx_pixelmap_data;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_text_scroll_wheel_gradient_create                               */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  12-31-2020     Kenneth Maxwell          Modified comment(s), removed  */
-/*                                            errant comment,             */
-/*                                            resulting in version 6.1.3  */
 /*                                                                        */
 /**************************************************************************/
 UINT _gx_utility_gradient_create(GX_GRADIENT *gradient, GX_VALUE width, GX_VALUE height,

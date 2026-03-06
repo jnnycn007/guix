@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -57,14 +58,8 @@
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
-/*                                                                        */
 /**************************************************************************/
-UINT  _gx_rich_text_view_context_restore()
+UINT  _gx_rich_text_view_context_restore(VOID)
 {
 GX_UBYTE top = _gx_system_rich_text_context_stack_save.gx_rich_text_context_stack_top;
 

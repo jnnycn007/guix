@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -70,15 +71,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_rich_text_view_draw                                             */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
-/*  03-02-2021     Ting Zhu                 Modified comment(s),          */
-/*                                            removed unreachable code,   */
-/*                                            resulting in version 6.1.5  */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_rich_text_view_single_line_draw(GX_RICH_TEXT_VIEW *text_view, GX_VALUE ypos, GX_RICH_TEXT_LINE_INFO *line_info)
@@ -299,12 +291,6 @@ GX_BOOL             escape = GX_FALSE;
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
 /*    Application Code                                                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
 /*                                                                        */
 /**************************************************************************/
 VOID  _gx_rich_text_view_text_draw(GX_RICH_TEXT_VIEW *text_view)

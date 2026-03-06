@@ -27,7 +27,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-       on the line drawing example. These operations simulate 
+       on the line drawing example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 
@@ -60,7 +60,7 @@ char test_comment[255];
 GX_CHAR text[] = "every year when the autumn comes, there will be a sports meeting in my school. I am so impressed by the opening ceremony. Every class will march on the ground and show their features, which is very funny. Last year, a group of students wore the co-splay dresses. When they showed up, they caught all people’s attention and won the biggest applause. It is a great event for every student, and also a good chance to let students develop their creativity. This year, my class decided to make a big surprise. Everyone has provided their idea and I love the atmosphere. I am so looking forward to the opening ceremony.every year when the autumn comes, there will be a sports meeting in my school. I am so impressed by the opening ceremony. Every class will march on the ground and show their features, which is very funny. Last year, a group of students wore the co-splay dresses. When they showed up, they caught all people’s attention and won the biggest applause. It is a great event for every student, and also a good chance to let students develop their creativity. This year, my class decided to make a big surprise. Everyone has provided their idea and I love the atmosphere. I am so looking forward to the opening ceremony.every year when the autumn comes, there will be a sports meeting in my school. I am so impressed by the opening ceremony. Every class will march on the ground and show their features, which is very funny. Last year, a group of students wore the co-splay dresses. When they showed up, they caught all people’s attention and won the biggest applause. It is a great event for every student, and also a good chance to let students develop their creativity. This year, my class decided to make a big surprise. Everyone has provided their idea and I love the atmosphere. I am so looking forward to the opening ceremony.";
 
 /* This thread simulates user input.  Its priority is lower
-   than the GUIX thread, so that GUIX finishes an operation 
+   than the GUIX thread, so that GUIX finishes an operation
    before this thread is able to issue the next command. */
 static VOID control_thread_entry(ULONG input)
 {

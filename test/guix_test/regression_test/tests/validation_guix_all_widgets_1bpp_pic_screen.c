@@ -27,7 +27,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-       on the line drawing example. These operations simulate 
+       on the line drawing example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 
@@ -68,7 +68,7 @@ int frame_id = 1;
 
     for(pixelmap_id_index = 0; pixelmap_id_index < (INT)(sizeof(pixelmap_id) / sizeof(int)); pixelmap_id_index++)
     {
-        /* Inform the validation system 
+        /* Inform the validation system
        (1) Frame ID, which identifies a specific test configuration;
        (2) Start recording frame on the next toggle operation.
        */

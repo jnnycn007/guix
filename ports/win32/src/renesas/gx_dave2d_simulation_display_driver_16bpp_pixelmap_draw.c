@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -63,12 +64,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2023     Ting Zhu                 Initial Version 6.4.0         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_dave2d_simulation_display_driver_565rgb_pixelmap_compressed_write(GX_DRAW_CONTEXT *context,
@@ -216,12 +211,6 @@ GX_RECTANGLE   *clip = context -> gx_draw_context_clip;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2023     Ting Zhu                 Initial Version 6.4.0         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_dave2d_simulation_display_driver_16bpp_4444argb_pixelmap_compressed_alpha_write(GX_DRAW_CONTEXT *context,
@@ -407,12 +396,6 @@ GX_RECTANGLE *clip = context -> gx_draw_context_clip;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2023     Ting Zhu                 Initial Version 6.4.0         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_dave2d_simulation_display_driver_16bpp_4444bgra_pixelmap_compressed_alpha_write(GX_DRAW_CONTEXT *context,
@@ -601,12 +584,6 @@ GX_RECTANGLE   *clip = context -> gx_draw_context_clip;
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2023     Ting Zhu                 Initial Version 6.4.0         */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_dave2d_simulation_display_driver_16bpp_32argb_pixelmap_compressed_write(GX_DRAW_CONTEXT *context,
                                                                                          INT xpos, INT ypos, GX_PIXELMAP *pixelmap)
@@ -778,12 +755,6 @@ GX_RECTANGLE   *clip = context -> gx_draw_context_clip;
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2023     Ting Zhu                 Initial Version 6.4.0         */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_dave2d_simulation_display_driver_16bpp_32argb_pixelmap_raw_write(GX_DRAW_CONTEXT *context,
                                                                                   INT xpos, INT ypos, GX_PIXELMAP *pixelmap)
@@ -889,12 +860,6 @@ GX_UBYTE           b;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2023     Ting Zhu                 Initial Version 6.4.0         */
 /*                                                                        */
 /**************************************************************************/
 VOID _gx_dave2d_simulation_display_driver_565rgb_pixelmap_blend(GX_DRAW_CONTEXT *context,
@@ -1006,12 +971,6 @@ GX_BOOL drawn = GX_FALSE;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2023     Ting Zhu                 Initial Version 6.4.0         */
 /*                                                                        */
 /**************************************************************************/
 VOID _gx_dave2d_simulation_display_driver_16bpp_pixelmap_draw(GX_DRAW_CONTEXT *context,

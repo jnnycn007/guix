@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -36,15 +37,10 @@
 /*    including all data types and external references.  It is assumed    */
 /*    that gx_api.h and gx_port.h have already been included.             */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
+
+#ifndef GX_MULTI_LINE_TEXT_VIEW_H
+#define GX_MULTI_LINE_TEXT_VIEW_H
 
 /* Define multi-line text view management function prototypes. */
 UINT _gx_multi_line_text_view_create(GX_MULTI_LINE_TEXT_VIEW *text_view_ptr,
@@ -110,3 +106,4 @@ UINT _gxe_rich_text_view_create(GX_RICH_TEXT_VIEW *rich_view,
                                 UINT control_block_size);
 UINT _gxe_rich_text_view_fonts_set(GX_RICH_TEXT_VIEW *rich_view, GX_RICH_TEXT_FONTS *fonts);
 
+#endif

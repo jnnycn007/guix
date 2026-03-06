@@ -202,9 +202,9 @@ VOID *load_binary_resource_data_to_ram()
 {
 UCHAR *address = GX_NULL;
 
-    /* If generated resource is stored in a FAT filesystem, it must be 
+    /* If generated resource is stored in a FAT filesystem, it must be
        loaded into memory before it can be used. This memory could be
-       RAM or FLASH, but for the purpose of this example will simply 
+       RAM or FLASH, but for the purpose of this example will simply
        read the file to RAM. */
     FILE *p_file;
     size_t total_length;

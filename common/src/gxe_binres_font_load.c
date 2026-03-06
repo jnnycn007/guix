@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -69,13 +70,8 @@
 /*                                                                        */
 /*    Application Code                                                    */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
-/*                                                                        */
 /**************************************************************************/
+#ifdef GX_BINARY_RESOURCE_SUPPORT
 UINT _gxe_binres_font_load(GX_UBYTE *root_address, UINT font_index, GX_UBYTE *buffer, ULONG *buffer_size)
 {
     if (root_address == GX_NULL || buffer == GX_NULL || buffer_size == GX_NULL)
@@ -85,4 +81,4 @@ UINT _gxe_binres_font_load(GX_UBYTE *root_address, UINT font_index, GX_UBYTE *bu
 
     return _gx_binres_font_load(root_address, font_index, buffer, buffer_size);
 }
-
+#endif

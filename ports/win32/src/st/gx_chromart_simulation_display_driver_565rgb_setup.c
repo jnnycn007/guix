@@ -1,11 +1,12 @@
 
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -60,12 +61,6 @@ extern VOID _gx_chromart_simulation_display_driver_565rgb_pixelmap_draw(GX_DRAW_
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Application Code                                                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
 /*                                                                        */
 /**************************************************************************/
 VOID _gx_chromart_simulation_display_driver_565rgb_setup(GX_DISPLAY *display, VOID *aux_data,

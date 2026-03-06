@@ -27,7 +27,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-       on the line drawing example. These operations simulate 
+       on the line drawing example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 
@@ -88,7 +88,7 @@ GX_EVENT my_event;
         ToggleScreen(pWindowScreen,pIndicatorScreen);
         gx_validation_screen_refresh(); 
 
-	/* Inform the validation system 
+	/* Inform the validation system
         (1) Frame ID, which identifies a specific test configuration;
         (2) Start recording frame on the next toggle operation.*/
         gx_validation_set_frame_id(frame_id);

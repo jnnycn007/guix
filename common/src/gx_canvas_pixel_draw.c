@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -62,14 +63,6 @@
 /*    Application Code                                                    */
 /*    _gx_widget_border_draw                                              */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 UINT  _gx_canvas_pixel_draw(GX_POINT position)
 {
@@ -77,7 +70,9 @@ GX_DRAW_CONTEXT *context;
 GX_DISPLAY      *display;
 GX_VIEW         *view;
 GX_COLOR         pixcolor;
+#if defined(GX_BRUSH_ALPHA_SUPPORT)
 GX_UBYTE         brush_alpha;
+#endif
 
     /* pick up the current drawing context */
     context = _gx_system_current_draw_context;
@@ -92,7 +87,9 @@ GX_UBYTE         brush_alpha;
     /* pick up current display driver */
     display = context -> gx_draw_context_display;
 
+#if defined(GX_BRUSH_ALPHA_SUPPORT)
     brush_alpha = context -> gx_draw_context_brush.gx_brush_alpha;
+#endif
 
     /* pick up the pixel color */
     pixcolor = context -> gx_draw_context_brush.gx_brush_line_color;

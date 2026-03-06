@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -35,26 +36,6 @@
 /*    This file defines the GUIX utility component,                       */
 /*    including all data types and external references.  It is assumed    */
 /*    that gx_api.h and gx_port.h have already been included.             */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added new prototype,        */
-/*                                            resulting in version 6.1    */
-/*  12-31-2020     Kenneth Maxwell          Modified comment(s), added    */
-/*                                            bidi test reordering APIs,  */
-/*                                            resulting in version 6.1.3  */
-/*  06-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            rename RENESAS_DAVE2D       */
-/*                                            support conditional,        */
-/*                                            resulting in version 6.1.7  */
-/*  01-31-2022     Ting Zhu                 Modified comment(s),          */
-/*                                            added new bidi text         */
-/*                                            reordering API,             */
-/*                                            resulting in version 6.1.10 */
 /*                                                                        */
 /**************************************************************************/
 

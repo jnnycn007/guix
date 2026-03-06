@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -71,14 +72,6 @@ VOID _gx_touch_driver_generic_resistive_calibrate(GX_RESISTIVE_TOUCH *touch);
 /*                                                                        */
 /*    Internal Logic                                                      */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_touch_driver_generic_resistive_pen_down_event_send(GX_RESISTIVE_TOUCH *touch)
 {
@@ -125,17 +118,6 @@ static VOID _gx_touch_driver_generic_resistive_pen_down_event_send(GX_RESISTIVE_
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Internal Logic                                                      */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  04-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            replace usage of abs(),     */
-/*                                            resulting in version 6.1.6  */
 /*                                                                        */
 /**************************************************************************/
 
@@ -191,14 +173,6 @@ static VOID _gx_touch_driver_generic_resistive_pen_drag_event_send(GX_RESISTIVE_
 /*                                                                        */
 /*    Internal Logic                                                      */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_touch_driver_generic_resistive_pen_up_event_send(GX_RESISTIVE_TOUCH *touch)
 {
@@ -247,14 +221,6 @@ static VOID _gx_touch_driver_generic_resistive_pen_up_event_send(GX_RESISTIVE_TO
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Internal Logic                                                      */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_touch_driver_generic_resistive_coord_calculate(GX_RESISTIVE_TOUCH *touch,
@@ -318,14 +284,6 @@ static UINT _gx_touch_driver_generic_resistive_coord_calculate(GX_RESISTIVE_TOUC
 /*                                                                        */
 /*    Application                                                         */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 VOID _gx_touch_driver_generic_resistive_setup(GX_RESISTIVE_TOUCH *touch, GX_RESISTIVE_TOUCH_INFO *info)
 {
@@ -366,14 +324,6 @@ VOID _gx_touch_driver_generic_resistive_setup(GX_RESISTIVE_TOUCH *touch, GX_RESI
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Internal Logic                                                      */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_touch_driver_generic_resistive_calibration_matrix_set(GX_RESISTIVE_TOUCH *touch,
@@ -448,17 +398,6 @@ static UINT _gx_touch_driver_generic_resistive_calibration_matrix_set(GX_RESISTI
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Internal Logic                                                      */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  04-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            replace usage of abs(),     */
-/*                                            resulting in version 6.1.6  */
 /*                                                                        */
 /**************************************************************************/
 static GX_BOOL _gx_touch_driver_generic_resistive_raw_read(GX_RESISTIVE_TOUCH *touch, GX_POINT *ret_val)
@@ -570,14 +509,6 @@ static GX_BOOL _gx_touch_driver_generic_resistive_raw_read(GX_RESISTIVE_TOUCH *t
 /*                                                                        */
 /*    Internal Logic                                                      */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static GX_BOOL _gx_touch_driver_generic_resistive_sample_read(GX_RESISTIVE_TOUCH *touch, GX_POINT *ret_val)
 {
@@ -622,14 +553,6 @@ static GX_BOOL _gx_touch_driver_generic_resistive_sample_read(GX_RESISTIVE_TOUCH
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Internal logic                                                      */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static GX_BOOL _gx_touch_driver_generic_resistive_coordinate_update(GX_RESISTIVE_TOUCH *touch)
@@ -687,14 +610,6 @@ static GX_BOOL _gx_touch_driver_generic_resistive_coordinate_update(GX_RESISTIVE
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Application                                                         */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 VOID _gx_touch_driver_generic_resistive_update(GX_RESISTIVE_TOUCH *touch)
@@ -755,14 +670,6 @@ VOID _gx_touch_driver_generic_resistive_update(GX_RESISTIVE_TOUCH *touch)
 /*                                                                        */
 /*    Internal Logic                                                      */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_touch_driver_generic_resistive_wait_for_touch(GX_RESISTIVE_TOUCH *touch)
 {
@@ -804,14 +711,6 @@ static VOID _gx_touch_driver_generic_resistive_wait_for_touch(GX_RESISTIVE_TOUCH
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Internal Logic                                                      */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_touch_driver_generic_resistive_wait_for_no_touch(GX_RESISTIVE_TOUCH *touch)
@@ -861,15 +760,6 @@ static VOID _gx_touch_driver_generic_resistive_wait_for_no_touch(GX_RESISTIVE_TO
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Application                                                         */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            fixed compiler warnings,    */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 VOID _gx_touch_driver_generic_resistive_calibrate(GX_RESISTIVE_TOUCH *touch)

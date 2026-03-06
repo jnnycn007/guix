@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -57,15 +58,6 @@
 /*                                                                        */
 /*    win32_graphics_driver_setup_8bit_palette                            */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*  02-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            made the function public,   */
-/*                                            resulting in version 6.1.4  */
-/*                                                                        */
 /**************************************************************************/
 VOID win32_display_driver_8bit_palette_set(GX_DISPLAY *display, GX_COLOR *palette, INT count)
 {
@@ -116,12 +108,6 @@ GX_WIN32_DISPLAY_DRIVER_DATA *instance;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    win32_graphics_driver_setup_8bit_palette                            */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
 /*                                                                        */
 /**************************************************************************/
 VOID win32_8bit_palette_bitmap_header_create(GX_DISPLAY *display)
@@ -175,15 +161,6 @@ GX_WIN32_DISPLAY_DRIVER_DATA *instance = (GX_WIN32_DISPLAY_DRIVER_DATA *)display
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Application Code                                                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*  01-31-2022     Ting Zhu                 Modified comment(s),          */
-/*                                            improved logic,             */
-/*                                            resulting in version 6.1.10 */
 /*                                                                        */
 /**************************************************************************/
 UINT win32_graphics_driver_setup_8bit_palette(GX_DISPLAY *display)

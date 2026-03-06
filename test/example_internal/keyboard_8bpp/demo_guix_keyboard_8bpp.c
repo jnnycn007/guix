@@ -119,7 +119,7 @@ VOID  demo_thread_entry(ULONG thread_input)
     PopulateKeyboardButtons(&keyboard_screen.keyboard_screen_keyboard_frame,
                             key_layout_1);
 
-//    gx_single_line_text_input_cursor_flag_set(&keyboard_screen.keyboard_screen_keyboard_input_field, 
+//    gx_single_line_text_input_cursor_flag_set(&keyboard_screen.keyboard_screen_keyboard_input_field,
 //                                              GX_STYLE_CURSOR_BLINK | GX_STYLE_CURSOR_ALWAYS);
 
 

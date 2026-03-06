@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -67,14 +68,6 @@
 /*    _gx_vertical_list_slide_back_check                                  */
 /*    _gx_vertical_list_up_wrap                                           */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 GX_WIDGET *_gx_widget_next_client_child_get(GX_WIDGET *start)
 {
@@ -120,12 +113,6 @@ GX_WIDGET *child = start -> gx_widget_next;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  06-02-2021     Ting Zhu                 Initial Version 6.1.7         */
 /*                                                                        */
 /**************************************************************************/
 GX_WIDGET *_gx_widget_next_visible_client_child_get(GX_WIDGET *start)

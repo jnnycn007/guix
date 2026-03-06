@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -36,12 +37,6 @@
 /*    including all data types and external references.  It is assumed    */
 /*    that gx_api.h and gx_port.h have already been included.             */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
-/*                                                                        */
 /**************************************************************************/
 #ifndef GX_RICH_TEXT_VIEW_H
 #define GX_RICH_TEXT_VIEW_H
@@ -59,11 +54,11 @@ typedef struct GX_RICH_TEXT_LINE_INFO_STRUCT
 
 /* Define rich text view management function prototypes. */
 UINT _gx_rich_text_view_context_peek(GX_RICH_TEXT_CONTEXT *context);
-UINT _gx_rich_text_view_context_pop();
+UINT _gx_rich_text_view_context_pop(VOID);
 UINT _gx_rich_text_view_context_push(GX_RICH_TEXT_CONTEXT *context);
-UINT _gx_rich_text_view_context_save();
-UINT _gx_rich_text_view_context_reset();
-UINT _gx_rich_text_view_context_restore();
+UINT _gx_rich_text_view_context_save(VOID);
+UINT _gx_rich_text_view_context_reset(VOID);
+UINT _gx_rich_text_view_context_restore(VOID);
 UINT _gx_rich_text_view_create(GX_RICH_TEXT_VIEW *text_view,
                                GX_CONST GX_CHAR *name,
                                GX_WIDGET *parent,

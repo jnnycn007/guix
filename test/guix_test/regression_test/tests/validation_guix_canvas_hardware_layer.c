@@ -27,7 +27,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-       on the line drawing example. These operations simulate 
+       on the line drawing example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 
@@ -112,8 +112,8 @@ display_layer_initialize_2,
 };
 
 /* Note: function gx_canvas_hide isn't correct for now.
-         so frame 2 isn't the expected output. 
-         This test would fail if function gx_canvas_hide is fixed, 
+         so frame 2 isn't the expected output.
+         This test would fail if function gx_canvas_hide is fixed,
          then it should be updated. */
 static VOID control_thread_entry(ULONG input)
 {
@@ -129,7 +129,7 @@ GX_DISPLAY *display;
     
     display = root->gx_window_root_canvas->gx_canvas_display;
     display->gx_display_layer_services = &display_layer_services_1;
-    gx_canvas_hardware_layer_bind(&animation_canvas, 1); // should return GX_INVALID_DISPLAY    
+    gx_canvas_hardware_layer_bind(&animation_canvas, 1); // should return GX_INVALID_DISPLAY
     
     display->gx_display_layer_services = &display_layer_services;
     

@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -55,23 +56,15 @@
 /*                                                                        */
 /*  CALLS                                                                 */
 /*                                                                        */
-/*    _gx_system_lock                       Obtain GUIX system lock       */
+/*    GX_ENTER_CRITICAL                     Obtain GUIX system lock       */
 /*    _gx_widget_detach                     Detach from current parent    */
 /*    _gx_widget_link                       Link widget                   */
-/*    _gx_system_unlock                     Release GUIX system lock      */
+/*    GX_EXIT_CRITICAL                      Release GUIX system lock      */
 /*                                                                        */
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Application Code                                                    */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 

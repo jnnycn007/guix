@@ -27,7 +27,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-       on the pixelmap drawing example. These operations simulate 
+       on the pixelmap drawing example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 
@@ -60,7 +60,7 @@ GX_CHAR test_text[]="\r33\r32\r31\r30\r29\r28\r27\r26\r25\r24\r23\r22\r21\r20\r1
 char test_comment[256];
 
 /* This thread simulates user input.  Its priority is lower
-   than the GUIX thread, so that GUIX finishes an operation 
+   than the GUIX thread, so that GUIX finishes an operation
    before this thread is able to issue the next command. */
 static VOID control_thread_entry(ULONG input)
 {

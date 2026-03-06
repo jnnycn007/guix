@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -64,12 +65,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_display_driver_8bpp_pixelmap_rotate                             */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  02-02-2021     Kenneth Maxwell          Initial Version 6.1.4         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_8bpp_rotated_pixelmap_raw_rotate(GX_DRAW_CONTEXT *context, INT xpos, INT ypos, GX_PIXELMAP *pixelmap,
@@ -226,12 +221,6 @@ INT           newypos;
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  02-02-2021     Kenneth Maxwell          Initial Version 6.1.4         */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_8bpp_rotated_pixelmap_transparent_rotate(GX_DRAW_CONTEXT *context, INT xpos, INT ypos, GX_PIXELMAP *pixelmap,
                                                                 INT angle, INT cx, INT cy)
@@ -387,12 +376,6 @@ INT           newypos;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_display_driver_8bpp_pixelmap_rotate                             */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  02-02-2021     Kenneth Maxwell          Initial Version 6.1.4         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_8bpp_rotated_pixelmap_simple_rotate(GX_DRAW_CONTEXT *context, INT xpos, INT ypos, GX_PIXELMAP *pixelmap,
@@ -558,12 +541,6 @@ else
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_display_driver_8bpp_pixelmap_rotate                             */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  02-02-2021     Kenneth Maxwell          Initial Version 6.1.4         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_8bpp_rotated_pixelmap_simple_transparent_rotate(GX_DRAW_CONTEXT *context, INT xpos, INT ypos, GX_PIXELMAP *pixelmap,
@@ -742,12 +719,6 @@ INT           newypos;
 /*                                                                        */
 /*    Application Code                                                    */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  02-02-2021     Kenneth Maxwell          Initial Version 6.1.4         */
 /*                                                                        */
 /**************************************************************************/
 VOID _gx_display_driver_8bpp_rotated_pixelmap_rotate(GX_DRAW_CONTEXT *context, INT xpos, INT ypos, GX_PIXELMAP *pixelmap,

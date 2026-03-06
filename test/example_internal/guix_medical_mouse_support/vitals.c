@@ -111,7 +111,7 @@ GX_ICON *heart_icon;
     ekg_value = ekg_values[ekg_index];
     line_y_coords[0] = CHART_Y_CENTER - ekg_value;  
 
-    // the slider scale is 0 to 100, so convert ekg value to 
+    // the slider scale is 0 to 100, so convert ekg value to
     // approximate slider value:
 
     slider_value = ekg_value + 45;          

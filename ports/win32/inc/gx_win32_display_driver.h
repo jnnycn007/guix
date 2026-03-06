@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -33,23 +34,6 @@
 /*  DESCRIPTION                                                           */
 /*                                                                        */
 /*    This file defines the GUIX Win32 display drivers.                   */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*  02-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added 8bpp/24bpp rotated    */
-/*                                            display driver declarations,*/
-/*                                            resulting in version 6.1.4  */
-/*  06-02-2021     Ting Zhu                 Modified comment(s),          */
-/*                                            declared gx_win32_driver_   */
-/*                                            thread_initialize,          */
-/*                                            resulting in version 6.1.7  */
-/*  01-31-2022     Ting Zhu                 Modified comment(s), modified */
-/*                                            driver data structure,      */
-/*                                            resulting in version 6.1.10 */
 /*                                                                        */
 /**************************************************************************/
 
