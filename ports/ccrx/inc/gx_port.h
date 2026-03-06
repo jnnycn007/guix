@@ -140,7 +140,7 @@ typedef unsigned char GX_UCHAR;
 
 #ifdef GX_SYSTEM_INIT
 CHAR _gx_version_id[] =
-    "Copyright (c) 2024 Microsoft Corporation.  *  GUIX Version 6.4.1 *";
+    "(c) 2024 Microsoft Corp. (c) 2026-present Eclipse ThreadX Contributors.  *  GUIX  Version 6.5.0.202601 *";
 #else
 extern  CHAR _gx_version_id[];
 #endif
