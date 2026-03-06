@@ -59,11 +59,11 @@ typedef struct GX_RICH_TEXT_LINE_INFO_STRUCT
 
 /* Define rich text view management function prototypes. */
 UINT _gx_rich_text_view_context_peek(GX_RICH_TEXT_CONTEXT *context);
-UINT _gx_rich_text_view_context_pop();
+UINT _gx_rich_text_view_context_pop(VOID);
 UINT _gx_rich_text_view_context_push(GX_RICH_TEXT_CONTEXT *context);
-UINT _gx_rich_text_view_context_save();
-UINT _gx_rich_text_view_context_reset();
-UINT _gx_rich_text_view_context_restore();
+UINT _gx_rich_text_view_context_save(VOID);
+UINT _gx_rich_text_view_context_reset(VOID);
+UINT _gx_rich_text_view_context_restore(VOID);
 UINT _gx_rich_text_view_create(GX_RICH_TEXT_VIEW *text_view,
                                GX_CONST GX_CHAR *name,
                                GX_WIDGET *parent,
