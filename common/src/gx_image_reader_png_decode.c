@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -62,14 +63,6 @@ static UINT _bit_count;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_png_decode                                         */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_png_crc_table_make(GX_PNG *png)
@@ -130,14 +123,6 @@ UINT k;
 /*    _gx_image_reader_png_decode                                         */
 /*    _gx_image_reader_png_bits_get                                       */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_png_crc_get(GX_PNG *png, UINT *crc, UINT len)
 {
@@ -186,14 +171,6 @@ UINT      crc_cal = (*crc);
 /*    _gx_image_reader_png_bits_get                                       */
 /*    _gx_image_reader_png_IHDR_chunk_read                                */
 /*    _gx_image_reader_png_gAMA_chunk_read                                */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_png_4bytes_read(GX_PNG *png, INT *value)
@@ -247,14 +224,6 @@ INT get_value;
 /*    _gx_image_reader_png_bits_get                                       */
 /*    _gx_image_reader_png_decode                                         */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_png_chunk_type_read(GX_PNG *png, CHAR *chunk_type)
 {
@@ -303,14 +272,6 @@ static VOID _gx_image_reader_png_chunk_type_read(GX_PNG *png, CHAR *chunk_type)
 /*    _gx_image_reader_png_ll_huffman_read                                */
 /*    _gx_image_reader_png_huffcode_decode                                */
 /*    _gx_image_reader_png_IDAT_chunk_read                                */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_png_bits_get(GX_PNG *png, UINT num_of_bits, UINT *return_value)
@@ -396,14 +357,6 @@ INT      index = png -> gx_png_trunk_end_index;
 /*    _gx_image_reader_png_fixed_ll_huffman_code_find                     */
 /*    _gx_image_reader_png_huffcode_decode                                */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static void _gx_image_reader_png_bits_revert(UINT *bits, UINT bits_len)
 {
@@ -452,14 +405,6 @@ UINT i;
 /*    _gx_image_reader_png_tRNS_chunk_read                                */
 /*    _gx_image_reader_png_IDAT_chunk_read                                */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_png_bits_skip(UINT num_of_skip_bits)
 {
@@ -498,18 +443,6 @@ static VOID _gx_image_reader_png_bits_skip(UINT num_of_skip_bits)
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_png_decode                                         */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added data boundary check,  */
-/*                                            resulting in version 6.1    */
-/*  10-31-2022     Ting Zhu                 Modified comment(s),          */
-/*                                            added invalid value check,  */
-/*                                            resulting in version 6.2.0  */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_png_IHDR_chunk_read(GX_PNG *png)
@@ -648,14 +581,6 @@ static UINT _gx_image_reader_png_IHDR_chunk_read(GX_PNG *png)
 /*    _gx_image_reader_png_huffcode_decode                                */
 /*    _gx_image_reader_png_ll_huffman_read                                */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_png_dynamic_huffman_code_find(INT  *huffman_table,
                                                            UINT  *huffman_bits_count,
@@ -734,14 +659,6 @@ UINT code_index = 0;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_png_huffcode_decode                                */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_png_fixed_ll_huffman_code_find(UINT scan_buffer,
@@ -827,14 +744,6 @@ UINT code;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_png_IDAT_chunk_read                                */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_png_clen_huffman_read(GX_PNG *png, UINT hclen)
@@ -923,20 +832,6 @@ INT  pos[16];
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_png_IDAT_chunk_read                                */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  06-02-2021     Ting Zhu                 Modified comment(s),          */
-/*                                            added invalid value check,  */
-/*                                            resulting in version 6.1.7  */
-/*  10-31-2022     Ting Zhu                 Modified comment(s),          */
-/*                                            added invalid value check,  */
-/*                                            resulting in version 6.2.0  */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_png_ll_huffman_read(GX_PNG *png, UINT hlit, UINT hdist)
@@ -1162,16 +1057,6 @@ INT  index;
 /*                                                                        */
 /*    _gx_image_reader_png_IDAT_chunk_read                                */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added data boundary check,  */
-/*                                            fixed gcc compile warning,  */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_png_huffcode_decode(GX_PNG *png, GX_BOOL dynamic, UINT decoded_data_size)
 {
@@ -1359,14 +1244,6 @@ UINT copy_len;
 /*                                                                        */
 /*    _gx_image_reader_png_decode                                         */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_png_tRNS_chunk_read(GX_PNG *png)
 {
@@ -1460,15 +1337,6 @@ INT index;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_png_decode                                         */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added data boundary check,  */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_png_IDAT_chunk_read(GX_PNG *png)
@@ -1708,15 +1576,6 @@ INT  nlen;
 /*                                                                        */
 /*    _gx_image_reader_png_decode                                         */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added data boundary check,  */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_png_gAMA_chunk_read(GX_PNG *png)
 {
@@ -1762,14 +1621,6 @@ static UINT _gx_image_reader_png_gAMA_chunk_read(GX_PNG *png)
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_png_decode                                         */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_png_PLTE_chunk_read(GX_PNG *png)
@@ -1831,17 +1682,6 @@ GX_UBYTE blue;
 /*                                                                        */
 /*    _gx_image_reader_png_unfilter                                       */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  08-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            replaced abs with GX_ABS,   */
-/*                                            resulting in version 6.1.8  */
-/*                                                                        */
 /**************************************************************************/
 static GX_UBYTE _gx_image_reader_png_paeth_predictor(GX_UBYTE a, GX_UBYTE b, GX_UBYTE c)
 {
@@ -1899,17 +1739,6 @@ INT pa, pb, pc;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_png_decode                                         */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2022     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added null pointer check,   */
-/*                                            resulting in version 6.2.0  */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_png_unfilter(GX_PNG *png)
@@ -2064,22 +1893,6 @@ INT y;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_image_decode                                       */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added data boundary check,  */
-/*                                            resulting in version 6.1    */
-/*  06-02-2021     Ting Zhu                 Modified comment(s), and      */
-/*                                            improved png decoding       */
-/*                                            performance,                */
-/*                                            resulting in version 6.1.7  */
-/*  10-31-2022     Ting Zhu                 Modified comment(s), and      */
-/*                                            added invalid value check,  */
-/*                                            resulting in version 6.2.0  */
 /*                                                                        */
 /**************************************************************************/
 UINT _gx_image_reader_png_decode(GX_CONST GX_UBYTE *read_data, ULONG data_size, GX_PIXELMAP *outmap)

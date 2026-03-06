@@ -27,7 +27,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-       on the pixelmap drawing example. These operations simulate 
+       on the pixelmap drawing example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 
@@ -75,7 +75,7 @@ extern GX_RESOURCE_ID    fill_pixelmap_id[4];
 extern GX_UBYTE          brush_alpha;
 
 /* This thread simulates user input.  Its priority is lower
-   than the GUIX thread, so that GUIX finishes an operation 
+   than the GUIX thread, so that GUIX finishes an operation
    before this thread is able to issue the next command. */
 static VOID control_thread_entry(ULONG input)
 {
@@ -112,7 +112,7 @@ int frame_id = 1;
                                 for(pixelmap_id_index = 0; pixelmap_id_index < (INT)(sizeof(fill_pixelmap_id)/sizeof(GX_RESOURCE_ID)); pixelmap_id_index++)
                                 {
                                     fill_pixelmap_index = pixelmap_id_index;
-                                    /* Inform the validation system 
+                                    /* Inform the validation system
                                     (1) Frame ID, which identifies a specific test configuration;
                                     (2) Start recording frame on the next toggle operation.
                                      */
@@ -139,7 +139,7 @@ int frame_id = 1;
                             }
                             else
                             {
-                                 /* Inform the validation system 
+                                 /* Inform the validation system
                                 (1) Frame ID, which identifies a specific test configuration;
                                 (2) Start recording frame on the next toggle operation.
                                 */

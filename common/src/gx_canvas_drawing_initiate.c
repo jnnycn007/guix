@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -71,24 +72,6 @@
 /*    _gx_widget_block_move                                               */
 /*    _gx_widget_children_draw                                            */
 /*    _gx_window_client_scroll                                            */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  12-31-2020     Kenneth Maxwell          Modified comment(s), added    */
-/*                                            display rotation support,   */
-/*                                            resulting in version 6.1.3  */
-/*  03-02-2021     Kenneth Maxwell          Modified comment(s), added    */
-/*                                            flip rotation support,      */
-/*                                            resulting in version 6.1.5  */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            added partial canvas buffer */
-/*                                            support,                    */
-/*                                            resulting in version 6.3.0  */
 /*                                                                        */
 /**************************************************************************/
 UINT _gx_canvas_drawing_initiate(GX_CANVAS *canvas, GX_WIDGET *who, GX_RECTANGLE *dirty_area)

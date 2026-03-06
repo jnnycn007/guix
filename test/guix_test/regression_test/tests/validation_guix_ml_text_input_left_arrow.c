@@ -9,7 +9,7 @@
 TEST_PARAM test_parameter = {
     "guix_ml_text_input_left_arrow", /* Test name */
     30, 120, 245, 330  /* Define the coordinates of the capture area.
-                         In this test, we only need to capture the multi 
+                         In this test, we only need to capture the multi
                          line text input drawing area.  */
 };
 
@@ -28,7 +28,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-       on the multi line text input example. These operations simulate 
+       on the multi line text input example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 
@@ -66,7 +66,7 @@ GX_UBYTE test_string_1[]={
  0x80, 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47, 0x48, 0xe4, 0xb8, 0x8d, 0xe8, 0xa6, 0x81, 0xe7, 0xa5, 0x9e, 0xe7, 0x9a, 0x84, 0xe5, 0x85, 0x89, 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x00};
 
 /* This thread simulates user input.  Its priority is lower
-   than the GUIX thread, so that GUIX finishes an operation 
+   than the GUIX thread, so that GUIX finishes an operation
    before this thread is able to issue the next command. */
 static VOID control_thread_entry(ULONG input)
 {

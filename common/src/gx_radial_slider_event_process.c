@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -66,19 +67,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_radial_slider_event_process                                     */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  02-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            renamed                     */
-/*                                            GX_STATUS_TRACKING_START to */
-/*                                            GX_STATUS_TRACKING_PEN,     */
-/*                                            resulting in version 6.1.4  */
 /*                                                                        */
 /**************************************************************************/
 static UINT  _gx_radial_slider_pen_down_event_process(GX_RADIAL_SLIDER *slider, GX_EVENT *event_ptr)
@@ -167,19 +155,6 @@ GX_RECTANGLE           rectangle;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_radial_slider_event_process                                     */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  02-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            renamed                     */
-/*                                            GX_STATUS_TRACKING_START to */
-/*                                            GX_STATUS_TRACKING_PEN,     */
-/*                                            resulting in version 6.1.4  */
 /*                                                                        */
 /**************************************************************************/
 static UINT  _gx_radial_slider_pen_drag_event_process(GX_RADIAL_SLIDER *slider, GX_EVENT *event_ptr)
@@ -273,19 +248,6 @@ GX_BOOL                update = GX_FALSE;
 /*                                                                        */
 /*    _gx_radial_slider_event_process                                     */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  02-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            renamed                     */
-/*                                            GX_STATUS_TRACKING_START to */
-/*                                            GX_STATUS_TRACKING_PEN,     */
-/*                                            resulting in version 6.1.4  */
-/*                                                                        */
 /**************************************************************************/
 static UINT  _gx_radial_slider_pen_up_event_process(GX_RADIAL_SLIDER *slider, GX_EVENT *event_ptr)
 {
@@ -366,14 +328,6 @@ GX_POINT              *point;
 /*                                                                        */
 /*    Application Code                                                    */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 UINT  _gx_radial_slider_event_process(GX_RADIAL_SLIDER *slider, GX_EVENT *event_ptr)

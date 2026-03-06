@@ -235,7 +235,7 @@ void dummy_app_create(void)
 
 /*  KGM this is broken, remove for now.
     gx_utility_rectangle_define(&size, 300, 50, 420, 80);
-    gx_single_line_text_input_create(&text_input_ptr, "text input", &demo_root_window, size, 1, 
+    gx_single_line_text_input_create(&text_input_ptr, "text input", &demo_root_window, size, 1,
                          "zero one TWO Three for five",27, GX_ECHO, GX_SOLID_LINE, GX_VERTICAL_BLINKING_CURSOR, 0, 0);
 */
     /* create demo window d */

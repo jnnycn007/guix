@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -61,18 +62,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_display_driver_32argb_pixelmap_blend                            */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  06-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            removed unused variable     */
-/*                                            assignment,                 */
-/*                                            resulting in version 6.1.7  */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_32argb_pixelmap_raw_blend(GX_DRAW_CONTEXT *context,
@@ -142,18 +131,6 @@ GX_RECTANGLE *clip = context -> gx_draw_context_clip;
 /*                                                                        */
 /*    _gx_display_driver_32argb_pixelmap_blend                            */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  06-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            removed unused variable     */
-/*                                            assignment,                 */
-/*                                            resulting in version 6.1.7  */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_32argb_pixelmap_alpha_blend(GX_DRAW_CONTEXT *context,
                                                            INT xpos, INT ypos, GX_PIXELMAP *pixelmap, GX_UBYTE alpha)
@@ -219,14 +196,6 @@ GX_RECTANGLE *clip = context -> gx_draw_context_clip;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 VOID _gx_display_driver_32argb_pixelmap_blend(GX_DRAW_CONTEXT *context,

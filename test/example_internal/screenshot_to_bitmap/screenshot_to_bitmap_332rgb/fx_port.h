@@ -52,13 +52,6 @@
 /*    various entries in the boot record, and directory entries are       */ 
 /*    defined in this file.                                               */ 
 /*                                                                        */ 
-/*  RELEASE HISTORY                                                       */ 
-/*                                                                        */ 
-/*    DATE              NAME                      DESCRIPTION             */ 
-/*                                                                        */ 
-/*  12-12-2011     William E. Lamie         Initial Cortex-M4/IAR         */
-/*                                            Support Version 5.0         */
-/*                                                                        */ 
 /**************************************************************************/ 
 
 #ifndef FX_PORT_H
@@ -70,7 +63,7 @@
 #ifdef FX_INCLUDE_USER_DEFINE_FILE
 
 
-/* Yes, include the user defines in fx_user.h. The defines in this file may 
+/* Yes, include the user defines in fx_user.h. The defines in this file may
    alternately be defined on the command line.  */
 
 #include "fx_user.h"
@@ -84,7 +77,7 @@
 
 /* Define FileX internal protection macros.  If FX_SINGLE_THREAD is defined,
    these protection macros are effectively disabled.  However, for multi-thread
-   uses, the macros are setup to utilize a ThreadX mutex for multiple thread 
+   uses, the macros are setup to utilize a ThreadX mutex for multiple thread
    access control into an open media.  */
 
 #ifdef FX_SINGLE_THREAD
@@ -105,8 +98,8 @@
 #define FX_RESTORE_INTS                 tx_interrupt_control(old_interrupt_posture);
 
 
-/* Define the error checking logic to determine if there is a caller error in the FileX API.  
-   The default definitions assume ThreadX is being used.  This code can be completely turned 
+/* Define the error checking logic to determine if there is a caller error in the FileX API.
+   The default definitions assume ThreadX is being used.  This code can be completely turned
    off by just defining these macros to white space.  */
 
 #ifndef TX_TIMER_PROCESS_IN_ISR

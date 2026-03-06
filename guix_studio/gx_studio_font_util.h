@@ -21,7 +21,7 @@ typedef struct
     int            width;
     int            height;
     int            pitch;
-    unsigned char *gx_glyph_data; /* pointer to Glyph bitmap data.  
+    unsigned char *gx_glyph_data; /* pointer to Glyph bitmap data.
                                      The size of the bitmap is width * height */
 } GXS_FONT_DATA;
 

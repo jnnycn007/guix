@@ -75,7 +75,7 @@ UINT load_language_count(GX_UBYTE *root_address, GX_VALUE *put_count);
 #ifdef STM32F439xx
 /**
   * @brief  System Clock Configuration
-  *         The system Clock is configured as follow : 
+  *         The system Clock is configured as follow :
   *            System Clock source            = PLL (HSE)
   *            SYSCLK(Hz)                     = 180000000
   *            HCLK(Hz)                       = 180000000
@@ -101,8 +101,8 @@ static void SystemClock_Config(void)
     /* Enable Power Control clock */
     __HAL_RCC_PWR_CLK_ENABLE();
     
-    /* The voltage scaling allows optimizing the power consumption when the device is 
-    clocked below the maximum system frequency, to update the voltage scaling value 
+    /* The voltage scaling allows optimizing the power consumption when the device is
+    clocked below the maximum system frequency, to update the voltage scaling value
     regarding system frequency refer to product datasheet.  */
     __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
     
@@ -120,7 +120,7 @@ static void SystemClock_Config(void)
     /* Activate the Over-Drive mode */
     HAL_PWREx_EnableOverDrive();
     
-    /* Select PLL as system clock source and configure the HCLK, PCLK1 and PCLK2 
+    /* Select PLL as system clock source and configure the HCLK, PCLK1 and PCLK2
     clocks dividers */
     RCC_ClkInitStruct.ClockType = (RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2);
     RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
@@ -304,9 +304,9 @@ VOID *load_binary_resource_data_to_ram()
 {
 UCHAR *address = GX_NULL;
 
-    /* If generated resource is stored in a FAT filesystem, it must be 
+    /* If generated resource is stored in a FAT filesystem, it must be
        loaded into memory before it can be used. This memory could be
-       RAM or FLASH, but for the purpose of this example will simply 
+       RAM or FLASH, but for the purpose of this example will simply
        read the file to RAM. */
     FILE *p_file;
     size_t total_length;

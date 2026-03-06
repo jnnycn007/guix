@@ -8,7 +8,7 @@
 TEST_PARAM test_parameter = {
     "guix_multi_line_text_view_24xrgb", /* Test name */
     46, 232, 316, 404  /* Define the coordinates of the capture area.
-                         In this test, we only need to capture the multi 
+                         In this test, we only need to capture the multi
                          line text view drawing area.  */
 };
 
@@ -27,7 +27,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-       on the multi line text view example. These operations simulate 
+       on the multi line text view example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 
@@ -72,7 +72,7 @@ static char *text_array[] = {text_1, text_2, text_3, text_4, text_5, text_6, tex
 char test_comment[256];
 
 /* This thread simulates user input.  Its priority is lower
-   than the GUIX thread, so that GUIX finishes an operation 
+   than the GUIX thread, so that GUIX finishes an operation
    before this thread is able to issue the next command. */
 static VOID control_thread_entry(ULONG input)
 {
@@ -88,7 +88,7 @@ TEXT_SCREEN_CONTROL_BLOCK *text_screen;
     gx_multi_line_text_view_text_color_set(&text_screen -> text_screen_text_view_1, GX_COLOR_ID_ORANGE, GX_COLOR_ID_ORANGE, GX_COLOR_ID_ORANGE);
     for(text_index = 0; text_index < 8; text_index++)
     {
-        /* Inform the validation system 
+        /* Inform the validation system
         (1) Frame ID, which identifies a specific test configuration;
         (2) Start recording frame on the next toggle operation.
         */

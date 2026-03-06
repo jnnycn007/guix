@@ -50,49 +50,6 @@
 /*    All service prototypes and data structure definitions are defined   */
 /*    in this file.                                                       */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-12-2005     William E. Lamie         Initial Version 5.0           */
-/*  07-18-2007     William E. Lamie         Modified comment(s), changed  */
-/*                                            the default file and path   */
-/*                                            length to 256, added burst  */
-/*                                            cache disable flags to the  */
-/*                                            media and file structures,  */
-/*                                            added boot signature offset */
-/*                                            for FAT32, added volume ID  */
-/*                                            offset for FAT32, changed   */
-/*                                            size of rename buffer, and  */
-/*                                            changed UL to ULONG cast,   */
-/*                                            resulting in version 5.1    */
-/*  03-01-2009     William E. Lamie         Modified comment(s), added    */
-/*                                            logic for trace support,    */
-/*                                            added macros to override    */
-/*                                            interrupt protection in     */
-/*                                            port files to simply use    */
-/*                                            ThreadX interrupt macros,   */
-/*                                            resulting in version 5.2    */
-/*  11-01-2015     William E. Lamie         Modified comment(s), added    */
-/*                                            major/minor release defines,*/
-/*                                            added support for exFAT,    */
-/*                                            added fault tolerant        */
-/*                                            support, changed the initial*/
-/*                                            date, and added new APIs,   */
-/*                                            resulting in version 5.3    */
-/*  04-15-2016     William E. Lamie         Modified comment(s),          */
-/*                                            defined the update rate of  */
-/*                                            system timer,               */
-/*                                            resulting in version 5.4    */
-/*  04-03-2017     William E. Lamie         Modified comment(s), added    */ 
-/*                                            conditional around maximum  */ 
-/*                                            path define, and added      */ 
-/*                                            default defines for         */ 
-/*                                            port-specific macros, added */ 
-/*                                            a macro to disable warning  */ 
-/*                                            of parameter not used,      */ 
-/*                                            resulting in version 5.5    */
-/*                                                                        */
 /**************************************************************************/
 
 #ifndef FX_API_H

@@ -149,7 +149,7 @@ typedef struct {
 // ** IMPORTANT NOTE TO SELF **
 //
 // If you modify the members of this class in any way, make SURE you initialize them
-// in the default constructor, and even more important make SURE you copy the new 
+// in the default constructor, and even more important make SURE you copy the new
 // members in the copy constructur!!
 /***************************************************************************************/
 class res_info {
@@ -388,7 +388,7 @@ struct animation_info_struct;
 // ** IMPORTANT NOTE TO SELF **
 //
 // If you modify the members of this class in any way, make SURE you initialize them
-// in the default constructor, and even more important make SURE you copy the new 
+// in the default constructor, and even more important make SURE you copy the new
 // members in the copy constructur!!
 /***************************************************************************************/
 class widget_info {

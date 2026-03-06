@@ -27,7 +27,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-       on the line drawing example. These operations simulate 
+       on the line drawing example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 
@@ -81,7 +81,7 @@ TEST test_list[] ={
 static char test_text[] = "It is universally\n acknowledged that\n trust is\n one of the\n most valuable\n assets for\n interpersonal communication. \nHowever, it is \nnot uncommon to have\n misunderstanding and generation\n gap between teachers and students. with the current trend\n of communication becoming necessary and\n indispensable in this ever-changing modern society, building trust is of great\n significance.In order to set up the credibility between teachers and students, on the one hand, as    teachers, we should sincerely deal with the students’ problems and difficulties, comprehending their necessities. On the other hand, as students, it is necessary that more understanding and respect should be given. Becoming good friends to have the transpositional consideration each other can build a harmonious atmosphere.";
 
 /* This thread simulates user input.  Its priority is lower
-   than the GUIX thread, so that GUIX finishes an operation 
+   than the GUIX thread, so that GUIX finishes an operation
    before this thread is able to issue the next command. */
 static VOID control_thread_entry(ULONG input)
 {

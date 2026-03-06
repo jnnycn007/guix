@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -72,14 +73,6 @@
 /*                                         Multi line text view           */
 /*                                           event process routine        */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 UINT    _gx_multi_line_text_view_scroll(GX_MULTI_LINE_TEXT_VIEW *view, GX_VALUE amount_to_scroll)
 {
@@ -117,7 +110,7 @@ GX_SCROLLBAR *scroll;
 
     block.gx_rectangle_left = (GX_VALUE)(block.gx_rectangle_left + 1);
 
-    /* If the text view has a thin (rounded) border with no 
+    /* If the text view has a thin (rounded) border with no
        whitespace between border and text, we cannot use block
        move to scroll because we will capture pixels from the
        rounded corner. In that case just use dirty_mark, otherwise

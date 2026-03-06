@@ -27,7 +27,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-       on the pixelmap drawing example. These operations simulate 
+       on the pixelmap drawing example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 
@@ -66,7 +66,7 @@ extern VOID calculate_line_ends(VOID);
 extern GX_WINDOW *pLineWin;
 
 /* This thread simulates user input.  Its priority is lower
-   than the GUIX thread, so that GUIX finishes an operation 
+   than the GUIX thread, so that GUIX finishes an operation
    before this thread is able to issue the next command. */
 static VOID control_thread_entry(ULONG input)
 {
@@ -87,7 +87,7 @@ GX_RECTANGLE size;
                 {
                     if(pattern_index) line_pattern = 0x0f0f0f0f;
                     else              line_pattern = 0;
-	            /* Inform the validation system 
+	            /* Inform the validation system
 	            (1) Frame ID, which identifies a specific test configuration;
                     (2) Start recording frame on the next toggle operation.
                     */
@@ -122,7 +122,7 @@ GX_RECTANGLE size;
            for(round_end = 0; round_end <= 1; round_end ++)
            {
                 rounded = round_end;
-	            /* Inform the validation system 
+	            /* Inform the validation system
 	            (1) Frame ID, which identifies a specific test configuration;
                     (2) Start recording frame on the next toggle operation.
                     */
@@ -157,7 +157,7 @@ GX_RECTANGLE size;
            for(round_end = 0; round_end <= 1; round_end ++)
            {
                 rounded = round_end;
-	            /* Inform the validation system 
+	            /* Inform the validation system
 	            (1) Frame ID, which identifies a specific test configuration;
                     (2) Start recording frame on the next toggle operation.
                     */

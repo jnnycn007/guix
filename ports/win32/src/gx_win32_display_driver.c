@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -277,12 +278,6 @@ extern ULONG                 _tx_thread_system_state;
 /*                                                                        */
 /*    None                                                                */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  01-31-2022     Ting Zhu                 Initial Version 6.1.10        */
-/*                                                                        */
 /**************************************************************************/
 static void CALLBACK gx_win32_timer_expiration(UINT wTimerID, UINT msg, DWORD dwUser, DWORD dw1, DWORD dw2)
 {
@@ -323,12 +318,6 @@ static void CALLBACK gx_win32_timer_expiration(UINT wTimerID, UINT msg, DWORD dw
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    gx_win32_driver_thread_initialize                                   */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  01-31-2022     Ting Zhu                 Initial Version 6.1.10        */
 /*                                                                        */
 /**************************************************************************/
 static void gx_win32_start_multimedia_timer(GX_WIN32_DISPLAY_DRIVER_DATA *instance)
@@ -379,12 +368,6 @@ static void gx_win32_start_multimedia_timer(GX_WIN32_DISPLAY_DRIVER_DATA *instan
 /*                                                                        */
 /*    gx_win32_input_driver                                               */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  01-31-2022     Ting Zhu                 Initial Version 6.1.10        */
-/*                                                                        */
 /**************************************************************************/
 static void gx_win32_stop_multimedia_timer()
 {
@@ -429,12 +412,6 @@ static void gx_win32_stop_multimedia_timer()
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    gx_win32_event_process                                              */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
 /*                                                                        */
 /**************************************************************************/
 static ULONG gx_win32_map_key_to_guix_event(USHORT wParam, int shift, int ctrl)
@@ -495,12 +472,6 @@ KEY_EVENT_ENTRY *pEntry;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    gx_win32_event_process                                              */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
 /*                                                                        */
 /**************************************************************************/
 static USHORT gx_win32_map_key_to_guix_key(USHORT wParam)
@@ -569,12 +540,6 @@ KEY_MAP_ENTRY *pEntry = win32_key_table;
 /*                                                                        */
 /*    gx_win32_window_create                                              */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*                                                                        */
 /**************************************************************************/
 static void gx_win32_get_icon_path()
 {
@@ -633,12 +598,6 @@ LONG  status;
 /*    gx_win32_message_to_guix                                            */
 /*    gx_win32_event_process                                              */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  01-31-2022     Ting Zhu                 Initial Version 6.1.10        */
-/*                                                                        */
 /**************************************************************************/
 void gx_win32_event_to_guix(GX_EVENT *event_ptr)
 {
@@ -685,15 +644,6 @@ void gx_win32_event_to_guix(GX_EVENT *event_ptr)
 /*    gx_win32_input_driver                                               */
 /*    gx_win32_event_process                                              */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*  01-31-2022     Ting Zhu                 Modified comment(s), modified */
-/*                                            GUIX event send logic,      */
-/*                                            resulting in version 6.1.10 */
-/*                                                                        */
 /**************************************************************************/
 void gx_win32_message_to_guix(USHORT event_type)
 {
@@ -737,12 +687,6 @@ GX_EVENT myevent;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Win32 display driver set up functions.                              */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
 /*                                                                        */
 /**************************************************************************/
 GX_WIN32_DISPLAY_DRIVER_DATA *gx_win32_get_free_data_instance(void)
@@ -800,12 +744,6 @@ GX_WIN32_DISPLAY_DRIVER_DATA *data = win32_instance_data;
 /*                                                                        */
 /*    gx_win32_event_process                                              */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*                                                                        */
 /**************************************************************************/
 GX_WIN32_DISPLAY_DRIVER_DATA *gx_win32_get_data_instance_by_win_handle(HWND winHandle)
 {
@@ -861,12 +799,6 @@ int index;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    win32_canvas_memory_prepare                                         */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  02-02-2021     Kenneth Maxwell          Initial Version 6.1.4         */
 /*                                                                        */
 /**************************************************************************/
 static void gx_win32_rotate_canvas_to_bmp_32bpp(GX_CANVAS *canvas)
@@ -950,12 +882,6 @@ INT    write_sign;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    win32_canvas_memory_prepare                                         */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial version 6.1.3         */
 /*                                                                        */
 /**************************************************************************/
 static void gx_win32_rotate_canvas_to_bmp_16bpp(GX_CANVAS *canvas)
@@ -1046,12 +972,6 @@ INT     write_stride;
 /*                                                                        */
 /*    win32_canvas_memory_prepare                                         */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  02-02-2021     Kenneth Maxwell          Initial Version 6.1.4         */
-/*                                                                        */
 /**************************************************************************/
 static void gx_win32_rotate_canvas_to_bmp_8bpp(GX_CANVAS *canvas)
 {
@@ -1139,19 +1059,6 @@ INT       write_stride;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    gx_win32_display_buffer_toggle                                      */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*  02-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added 8bpp and 32bpp canvas */
-/*                                            rotate logic,               */
-/*                                            resulting in version 6.1.4  */
-/*  03-02-2021     Ting Zhu                 Modified comment(s), added    */
-/*                                            flip rotation support,      */
-/*                                            resulting in version 6.1.5  */
 /*                                                                        */
 /**************************************************************************/
 VOID *_win32_canvas_memory_prepare(GX_CANVAS *canvas, GX_RECTANGLE *dirty)
@@ -1267,15 +1174,6 @@ INT         row;
 /*                                                                        */
 /*    None                                                                */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*  02-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            fixed logic,                */
-/*                                            resulting in version 6.1.4  */
-/*                                                                        */
 /**************************************************************************/
 VOID gx_win32_display_buffer_toggle(GX_CANVAS *canvas, GX_RECTANGLE *dirty)
 {
@@ -1382,15 +1280,6 @@ VOID                         *memptr;
 /*                                                                        */
 /*    gx_win32_driver_thread_entry                                        */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*  01-31-2022     Ting Zhu                 Modified comment(s),          */
-/*                                            corrected window size,      */
-/*                                            resulting in version 6.1.10 */
-/*                                                                        */
 /**************************************************************************/
 HWND gx_win32_window_create(GX_WIN32_DISPLAY_DRIVER_DATA *gx_driver_ptr, WNDPROC event_process, INT xpos, INT ypos)
 {
@@ -1474,18 +1363,6 @@ WNDCLASS  wndclass;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    gx_win32_window_create                                              */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*  01-31-2022     Ting Zhu                 Modified comment(s), modified */
-/*                                            GUIX event send logic,      */
-/*                                            resulting in version 6.1.10 */
-/*  04-25-2022     Ting Zhu                 Modified comment(s), improved */
-/*                                            timer event send logic,     */
-/*                                            resulting in version 6.1.11 */
 /*                                                                        */
 /**************************************************************************/
 LRESULT CALLBACK gx_win32_event_process(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -1687,16 +1564,6 @@ GX_BOOL                       check_key_event;
 /*                                                                        */
 /*    gx_win32_driver_thread_entry                                        */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*  01-31-2022     Ting Zhu                 Modified comment(s), added    */
-/*                                            timer stop and thread       */
-/*                                            handle close logic,         */
-/*                                            resulting in version 6.1.10 */
-/*                                                                        */
 /**************************************************************************/
 void gx_win32_input_driver(GX_WIN32_DISPLAY_DRIVER_DATA *instance)
 {
@@ -1766,15 +1633,6 @@ int exit_code = 0;
 /*                                                                        */
 /*    win32 guix setup functions                                          */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*  06-02-2021     Ting Zhu                 Modified comment(s),          */
-/*                                            reorganized code,           */
-/*                                            resulting in version 6.1.7  */
-/*                                                                        */
 /**************************************************************************/
 void gx_win32_driver_thread_entry(ULONG thread_input)
 {
@@ -1827,18 +1685,6 @@ GX_WIN32_DISPLAY_DRIVER_DATA *instance = (GX_WIN32_DISPLAY_DRIVER_DATA *)thread_
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    win32 thread entry                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  06-02-2021     Ting Zhu                 Initial Version 6.1.7         */
-/*  01-31-2022     Ting Zhu                 Modified comment(s), modified */
-/*                                            to use multi-media timer,   */
-/*                                            resulting in version 6.1.10 */
-/*  10-31-2022     Ting Zhu                 Modified comment(s), added    */
-/*                                            ThreadX system state check, */
-/*                                            resulting in version 6.2.0  */
 /*                                                                        */
 /**************************************************************************/
 void gx_win32_driver_thread_initialize(GX_WIN32_DISPLAY_DRIVER_DATA *instance)
@@ -1897,12 +1743,6 @@ void gx_win32_driver_thread_initialize(GX_WIN32_DISPLAY_DRIVER_DATA *instance)
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    None                                                                */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
 /*                                                                        */
 /**************************************************************************/
 int WINAPI WinMain(HINSTANCE Instance, HINSTANCE PrevInstance,

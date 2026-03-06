@@ -8,7 +8,7 @@
 TEST_PARAM test_parameter = {
     "guix_single_line_text_input_clip_32xrgb", /* Test name */
     20, 25, 230, 200  /* Define the coordinates of the capture area.
-                      In this test, we only need to capture the 
+                      In this test, we only need to capture the
                       clip window and multi_line_text_view window
                       drawing area.  */
 };
@@ -28,7 +28,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-    on the canvas_text_view drawing example. These operations 
+    on the canvas_text_view drawing example. These operations
     simulate user input. */
     gx_validation_control_thread_create(control_thread_entry);
 

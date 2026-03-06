@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -36,91 +37,6 @@
 /*    Please note that basic data type definitions and other architecture-*/
 /*    specific information is contained in the file gx_port.h.            */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added line break status,    */
-/*                                            updated product constants,  */
-/*                                            modified controls blocks,   */
-/*                                            added new APIs,             */
-/*                                            resulting in version 6.1    */
-/*  12-31-2020     Kenneth Maxwell          Modified comment(s), added    */
-/*                                            display rotation support,   */
-/*                                            declare new APIs,           */
-/*                                            defined new status,         */
-/*                                            resulting in version 6.1.3  */
-/*  03-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            change scroll_wheel style   */
-/*                                            flag to status flag,        */
-/*                                            renamed                     */
-/*                                            GX_STATUS_TRACKING_START to */
-/*                                            GX_STATUS_TRACKING_PEN,     */
-/*                                            added rotation angle        */
-/*                                            definitions, changed        */
-/*                                            pixelmap rotation flag      */
-/*                                            definitions,                */
-/*                                            resulting in version 6.1.5  */
-/*  06-02-2021     Ting Zhu                 Modified comment(s),          */
-/*                                            added new widget type       */
-/*                                            GX_GENERIC_SCROLL_WHEEL,    */
-/*                                            added animation delete API, */
-/*                                            added generic Dave2D        */
-/*                                            graphics accelerator        */
-/*                                            support,                    */
-/*                                            resulting in version 6.1.7  */
-/*  08-02-2021     Ting Zhu                 Modified comment(s), added    */
-/*                                            GX_TICKS_SECOND definition  */
-/*                                            resulting in version 6.1.8  */
-/*  10-15-2021     Ting Zhu                 Modified comment(s),          */
-/*                                            updated patch number,       */
-/*                                            resulting in version 6.1.9  */
-/*  01-31-2022     Kenneth Maxwell          Modified comment(s),          */
-/*                                            removed errant semicolons,  */
-/*                                            added new member to struct  */
-/*                                            GX_RADIAL_SLIDER_INFO,      */
-/*                                            added new member to         */
-/*                                            vertical and horizontal     */
-/*                                            list control blocks,        */
-/*                                            resulting in version 6.1.10 */
-/*  04-25-2022     Ting Zhu                 Modified comment(s),          */
-/*                                            added new member to struct  */
-/*                                            GX_DISPLAY_LAYER_SERVICES,  */
-/*                                            added new animation flag    */
-/*                                            GX_ANIMATION_BLOCK_MOVE,    */
-/*                                            resulting in version 6.1.11 */
-/*  07-29-2022     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added new style             */
-/*                                            GX_STYLE_REPEAT_SELECT,     */
-/*                                            resulting in version 6.1.12 */
-/*  10-31-2022     Kenneth Maxwell          Modified comment(s),          */
-/*                                            removed unused style flag   */
-/*                                            GX_SCROLLBAR_BACKGROUND_    */
-/*                                            TILE,                       */
-/*                                            resulting in version 6.2.0  */
-/*  03-08-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            updated patch version,      */
-/*                                            resulting in version 6.2.1  */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            added new APIs for loading  */
-/*                                            pixelmap and font from      */
-/*                                            standalone binary,          */
-/*                                            removed unused defines,     */
-/*                                            added partial canvas buffer */
-/*                                            support,                    */
-/*                                            resulting in version 6.3.0  */
-/*  12-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            updated patch version,      */
-/*                                            resulting in version 6.4.0  */
-/*  03-01-2024     Ting Zhu                 Modified comment(s),          */
-/*                                            updated patch version,      */
-/*                                            resulting in version 6.4.1  */
-/*  02-19-2025     Fr�d�ric Desbiens        Modified comment(s),          */
-/*                                            update version number,      */
-/*                                            resulting in version 6.4.2  */
-/*                                                                        */
 /**************************************************************************/
 
 #ifndef GX_API_H
@@ -142,9 +58,9 @@ extern   "C" {
 
 #define AZURE_RTOS_GUIX
 #define GUIX_MAJOR_VERSION  6
-#define GUIX_MINOR_VERSION  4
-#define GUIX_PATCH_VERSION  5
-#define GUIX_BUILD_VERSION  202504
+#define GUIX_MINOR_VERSION  5
+#define GUIX_PATCH_VERSION  0
+#define GUIX_BUILD_VERSION  202601
 #define GUIX_HOTFIX_VERSION ' '
 
 /* The following symbols are defined for backward compatibility reasons.*/
@@ -1402,7 +1318,7 @@ typedef struct GX_PROGRESS_BAR_INFO_STRUCT
     GX_RESOURCE_ID gx_progress_bar_fill_pixelmap;
 } GX_PROGRESS_BAR_INFO;
 
-/* Define circular gauge information structure, this structure is used to 
+/* Define circular gauge information structure, this structure is used to
    define the appearance of the circular gauge widget.  */
 typedef struct GX_CIRCULAR_GAUGE_INFO_STRUCT
 {

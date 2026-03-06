@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -250,12 +251,6 @@ static ARABIC_LIGATURE arabic_ligature_table[] =
 /*                                                                        */
 /*    _gx_utility_bidi_arabic_shaping                                     */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_arabic_joining_type_get(ULONG code_point)
 {
@@ -308,12 +303,6 @@ ARABIC_SHAPING *shaping = arabic_shaping_table;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_bidi_arabic_shaping                                     */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
 /*                                                                        */
 /**************************************************************************/
 static ULONG _gx_utility_bidi_arabic_form_get(ULONG code_point, UINT form_type)
@@ -388,12 +377,6 @@ ARABIC_FORM *entry = GX_NULL;
 /*                                                                        */
 /*    _gx_utility_bidi_arabic_shaping                                     */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
-/*                                                                        */
 /**************************************************************************/
 static ULONG _gx_utility_bidi_arabic_ligature_get(ULONG alef, ULONG lam)
 {
@@ -441,12 +424,6 @@ ARABIC_LIGATURE *entry = arabic_ligature_table;
 /*                                                                        */
 /*    _gx_utility_bidi_arabic_shaping                                     */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
-/*                                                                        */
 /**************************************************************************/
 static GX_BOOL _gx_utility_bidi_right_joining_causing_test(UINT joining_type)
 {
@@ -491,12 +468,6 @@ static GX_BOOL _gx_utility_bidi_right_joining_causing_test(UINT joining_type)
 /*                                                                        */
 /*    _gx_utility_bidi_arabic_shaping                                     */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
-/*                                                                        */
 /**************************************************************************/
 static GX_BOOL _gx_utility_bidi_left_joining_causing_test(UINT joining_type)
 {
@@ -540,12 +511,6 @@ static GX_BOOL _gx_utility_bidi_left_joining_causing_test(UINT joining_type)
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_bidi_arabic_shaping                                     */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
 /*                                                                        */
 /**************************************************************************/
 static GX_BOOL _gx_utility_bidi_arabic_test(GX_BIDI_CONTEXT *context)
@@ -595,12 +560,6 @@ INT           index;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
 /*                                                                        */
 /**************************************************************************/
 UINT _gx_utility_bidi_arabic_shaping(GX_BIDI_CONTEXT *context)

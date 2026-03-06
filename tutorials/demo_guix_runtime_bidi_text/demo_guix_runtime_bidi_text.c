@@ -135,7 +135,7 @@ VOID window_draw(GX_WINDOW *window)
 {
 #if defined(GX_DYNAMIC_BIDI_TEXT_SUPPORT)
     /* This is an example to draw bidi text to canvas.
-    
+
        If you are using a text widget for displaying bidi text,
        the following process is not needed, the text widget handles everything for you. */
 
