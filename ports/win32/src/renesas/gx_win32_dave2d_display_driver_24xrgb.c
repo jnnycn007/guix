@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -57,12 +58,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    win32_dave2d_graphics_driver_setup_24xrgb                           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2023     Ting Zhu                 Initial Version 6.4.0         */
 /*                                                                        */
 /**************************************************************************/
 VOID win32_dave2d_simulation_24xrgb_bitmap_header_create(GX_DISPLAY *display)
@@ -126,15 +121,6 @@ DWORD                        *putmask;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Application Code                                                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2023     Ting Zhu                 Initial Version 6.4.0         */
-/*  10-31-2022     Kenneth Maxwell          Modify comments, change       */
-/*                                            function name,              */
-/*                                            resulting in Version 6.2.0  */
 /*                                                                        */
 /**************************************************************************/
 UINT win32_dave2d_graphics_driver_setup_24xrgb(GX_DISPLAY *display)

@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -34,22 +35,6 @@
 /*    GUIX features by commenting out or including the definitions below  */
 /*    to the implementation of high-performance GUIX UI framework.        */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  01-31-2022     Kenneth Maxwell          Modified comment(s),          */
-/*                                            fixed typo,                 */
-/*                                            resulting in version 6.1.10 */
-/*  10-31-2023     Ting Zhu                 Modified comment(s), added    */
-/*                                            GX_ENABLE_ARM_HELIUM and    */
-/*                                            partial canvas frame buffer */
-/*                                            support configurations,     */
-/*                                            resulting in version 6.3.0  */
-/*                                                                        */
 /**************************************************************************/
 
 #ifndef GX_USER_H
@@ -69,11 +54,11 @@
    change GUIX System Timer value. */
 /* #define GX_SYSTEM_TIMER_MS  20 */
 
-/* This can be defined to insert an application specific data 
+/* This can be defined to insert an application specific data
    field into the GX_WIDGET control block */
 /* #define GX_WIDGET_USER_DATA */
 
-/* This can be defined to enable the use of ARM Helium intrinsics for 
+/* This can be defined to enable the use of ARM Helium intrinsics for
    JPEG decoding. */
 /* #define GX_ENABLE_ARM_HELIUM */
 

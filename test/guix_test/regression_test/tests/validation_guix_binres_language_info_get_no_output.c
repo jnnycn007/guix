@@ -28,7 +28,7 @@ VOID tx_application_define(void *first_unused_memory)
     gx_validation_watchdog_create(100);
 
     /* Create a dedicated thread to perform various operations
-       on the line drawing example. These operations simulate 
+       on the line drawing example. These operations simulate
        user input. */
     tx_thread_create(&Guix_API_Test, "GUIX API Test", control_thread_entry,
                      0, control_thread_stack, sizeof(control_thread_stack), 

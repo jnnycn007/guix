@@ -40,7 +40,7 @@ USHORT          easing_function_id = 0;
 GX_BOOL         animation_back = GX_FALSE;
 /* Define easing functions. */
 
-/* Would it be difficult to draw the easing function graphi instead of 
+/* Would it be difficult to draw the easing function graphi instead of
    using pre-defined pixelmaps for each shape?
 */
 GX_CONST EASING_FUNCTION_DATA easing_function_list[] = {

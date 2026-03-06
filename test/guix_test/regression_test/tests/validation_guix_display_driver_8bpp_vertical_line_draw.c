@@ -28,7 +28,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-       on the line drawing example. These operations simulate 
+       on the line drawing example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 
@@ -77,7 +77,7 @@ char test_comment[256];
 extern GX_STUDIO_DISPLAY_INFO lines_8bpp_display_table[];
 
 /* This thread simulates user input.  Its priority is lower
-   than the GUIX thread, so that GUIX finishes an operation 
+   than the GUIX thread, so that GUIX finishes an operation
    before this thread is able to issue the next command. */
 static VOID control_thread_entry(ULONG input)
 {
@@ -97,7 +97,7 @@ GX_CONST GX_THEME *theme_ptr;
     {
         line_width = width_value[width_index];
                                  
-        /* Inform the validation system 
+        /* Inform the validation system
         (1) Frame ID, which identifies a specific test configuration;
         (2) Start recording frame on the next toggle operation.
         */
@@ -125,7 +125,7 @@ GX_CONST GX_THEME *theme_ptr;
     {
         line_width = width_value[width_index];
                                  
-        /* Inform the validation system 
+        /* Inform the validation system
         (1) Frame ID, which identifies a specific test configuration;
         (2) Start recording frame on the next toggle operation.
         */

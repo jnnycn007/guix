@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -69,18 +70,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            update with bidi context    */
-/*                                            structure change,           */
-/*                                            moved a pointer check to    */
-/*                                            its caller function,        */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_buffer_allocate(GX_BIDI_CONTEXT *context)
@@ -245,15 +234,6 @@ GX_BIDI_TEXT_INFO   *input_info = context -> gx_bidi_context_input_info;
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            removed line breaking logic,*/
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_initiate(GX_BIDI_CONTEXT *context)
 {
@@ -321,14 +301,6 @@ GX_BIDI_UNIT      *unit;
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
 /*    _gx_utility_bidi_explicit_levels_determine                          */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_block_level_determine(GX_BIDI_CONTEXT *context, UINT start_index, UINT end_index, GX_UBYTE *level)
@@ -414,14 +386,6 @@ GX_BIDI_UNIT *unit;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_explicit_levels_determine(GX_BIDI_CONTEXT *context)
@@ -700,14 +664,6 @@ GX_BIDI_UNIT           *unit;
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_level_runs_compute(GX_BIDI_CONTEXT *context, INT start_index, INT end_index)
 {
@@ -819,14 +775,6 @@ GX_BIDI_UNIT      *unit;
 /*                                                                        */
 /*    _gx_utility_bidi_one_isolate_run_sequences_get                      */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_utiltiy_isolate_run_sequence_append(GX_BIDI_CONTEXT *context, INT start_index, INT end_index,
                                                     GX_BIDI_ISOLATE_RUN *isolate_run)
@@ -892,14 +840,6 @@ GX_BIDI_UNIT *unit;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_bidi_isolate_run_sequence_get                           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_one_isolate_run_sequence_get(GX_BIDI_CONTEXT *context, GX_UBYTE  pre_level,
@@ -1031,14 +971,6 @@ ULONG         last_character;
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_isolate_run_sequences_get(GX_BIDI_CONTEXT *context)
 {
@@ -1151,14 +1083,6 @@ GX_BIDI_UNIT        *unit;
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_weak_type_resolve_1(GX_BIDI_CONTEXT *context, GX_BIDI_ISOLATE_RUN *entry)
 {
@@ -1236,14 +1160,6 @@ GX_BIDI_UNIT *unit;
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_weak_type_resolve_2_3(GX_BIDI_CONTEXT *context, GX_BIDI_ISOLATE_RUN *entry)
 {
@@ -1318,14 +1234,6 @@ GX_BIDI_UNIT *unit;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_weak_type_resolve_4(GX_BIDI_CONTEXT *context, GX_BIDI_ISOLATE_RUN *entry)
@@ -1406,14 +1314,6 @@ GX_BIDI_UNIT *unit;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_weak_type_resolve_5(GX_BIDI_CONTEXT *context, GX_BIDI_ISOLATE_RUN *entry)
@@ -1497,14 +1397,6 @@ GX_BIDI_UNIT *unit;
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_weak_type_resolve_6(GX_BIDI_CONTEXT *context, GX_BIDI_ISOLATE_RUN *entry)
 {
@@ -1562,14 +1454,6 @@ GX_BIDI_UNIT *unit;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_weak_type_resolve_7(GX_BIDI_CONTEXT *context, GX_BIDI_ISOLATE_RUN *entry)
@@ -1652,14 +1536,6 @@ GX_BIDI_UNIT *unit;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_bidi_neutral_type_resolve_0                             */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_bracket_pair_search(GX_BIDI_CONTEXT *context, GX_BIDI_ISOLATE_RUN *entry, INT **return_bracket_pair, INT *return_pair_count)
@@ -1797,14 +1673,6 @@ GX_BIDI_UNIT        *unit;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_neutral_type_resolve_0(GX_BIDI_CONTEXT *context, GX_BIDI_ISOLATE_RUN *entry)
@@ -2032,14 +1900,6 @@ GX_BIDI_UNIT *unit;
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_neutral_type_resolve_1(GX_BIDI_CONTEXT *context, GX_BIDI_ISOLATE_RUN *entry)
 {
@@ -2137,14 +1997,6 @@ GX_UBYTE type;
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_neutral_type_resolve_2(GX_BIDI_CONTEXT *context, GX_BIDI_ISOLATE_RUN *entry)
 {
@@ -2215,14 +2067,6 @@ GX_BIDI_UNIT *unit;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_implicit_level_resolve(GX_BIDI_CONTEXT *context, GX_BIDI_ISOLATE_RUN *entry)
@@ -2302,14 +2146,6 @@ GX_BIDI_UNIT *unit;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_isolate_run_sequences_resolve(GX_BIDI_CONTEXT *context)
@@ -2427,17 +2263,6 @@ GX_BIDI_ISOLATE_RUN *entry = context -> gx_bidi_context_isolate_runs;
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-15-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            corrected logic,            */
-/*                                            resulting in version 6.1.9  */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_reordering_resolve_1(GX_BIDI_CONTEXT *context, INT start_index, INT end_index)
 {
@@ -2552,14 +2377,6 @@ USHORT        mirror;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_reordering_resolve_2(GX_BIDI_CONTEXT *context, INT start_index, INT end_index)
@@ -2686,12 +2503,6 @@ INT                count;
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_line_break(GX_BIDI_CONTEXT *context)
 {
@@ -2808,16 +2619,6 @@ INT                line_index = -1;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            update with bidi context    */
-/*                                            structure change,           */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_reordering_resolve(GX_BIDI_CONTEXT *context, GX_BIDI_RESOLVED_TEXT_INFO **resolved_info)
@@ -2957,21 +2758,6 @@ GX_BIDI_RESOLVED_TEXT_INFO *bidi_text;
 /*                                                                        */
 /*    _gx_utility_bidi_paragraph_reorder                                  */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s), modified */
-/*                                            line breaking logic,        */
-/*                                            supported Arabic shaping,   */
-/*                                            updated with resolved text  */
-/*                                            info structure change,      */
-/*                                            resulting in version 6.1    */
-/*  01-31-2022     Kenneth Maxwell          Modified comment(s), modified */
-/*                                            base level set logic,       */
-/*                                            resulting in version 6.1.10 */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_utility_bidi_one_paragraph_reorder(GX_BIDI_TEXT_INFO *input_info, GX_BIDI_RESOLVED_TEXT_INFO **resolved_info, UINT *processed_size)
 {
@@ -3093,16 +2879,6 @@ GX_BIDI_CONTEXT context;
 /*                                                                        */
 /*    Application Code                                                    */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
-/*  12-31-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            made this function a public */
-/*                                            api,                        */
-/*                                            resulting in version 6.1.3  */
-/*                                                                        */
 /**************************************************************************/
 UINT _gx_utility_bidi_paragraph_reorder(GX_BIDI_TEXT_INFO *input_info, GX_BIDI_RESOLVED_TEXT_INFO **resolved_info_head)
 {
@@ -3141,12 +2917,6 @@ UINT _gx_utility_bidi_paragraph_reorder(GX_BIDI_TEXT_INFO *input_info, GX_BIDI_R
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Application Code                                                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  01-31-2022     Ting Zhu                 Initial Version 6.1.10        */
 /*                                                                        */
 /**************************************************************************/
 UINT _gx_utility_bidi_paragraph_reorder_ext(GX_BIDI_TEXT_INFO *input_info, GX_BIDI_RESOLVED_TEXT_INFO **resolved_info_head)

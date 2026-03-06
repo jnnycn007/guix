@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -32,29 +33,6 @@
 /*                                                                        */
 /*    This file contains data type definitions and constants specific     */
 /*    to the implementation of high-performance GUIX UI framework.        */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
-/*  12-31-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added new defines,          */
-/*                                            resulting in version 6.1.3  */
-/*  04-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added new defines,          */
-/*                                            resulting in version 6.1.6  */
-/*  06-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            defined GX_DISABLE_THREADX_ */
-/*                                            TIMER_SOURCE,               */
-/*                                            resulting in version 6.1.7  */
-/*  08-02-2021     Kenneth Maxwell          Modified comment(s), removed  */
-/*                                            GX_SYSTEM_TIMER_TICKS and   */
-/*                                            GX_TICKS_SECOND definitions,*/
-/*                                            resulting in version 6.1.8  */
-/*  01-31-2022     Ting Zhu                 Modified comment(s), modified */
-/*                                            event thread create logic,  */
-/*                                            resulting in version 6.1.10 */
 /*                                                                        */
 /**************************************************************************/
 

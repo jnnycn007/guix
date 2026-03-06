@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -66,18 +67,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_scroll_wheel_event_process                                      */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  06-02-2021     Ting Zhu                 Modified comment(s),          */
-/*                                            updated with scroll wheel   */
-/*                                            control block members,      */
-/*                                            resulting in version 6.1.7  */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_scroll_wheel_timer_event_handler(GX_SCROLL_WHEEL *wheel, UINT timer_id)
@@ -228,14 +217,6 @@ GX_BOOL    generate_event = GX_FALSE;
 /*                                                                        */
 /*    _gx_scroll_wheel_event_process                                      */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_scroll_wheel_flick_event_handler(GX_SCROLL_WHEEL *wheel, INT flick_speed)
 {
@@ -368,19 +349,6 @@ INT speed;
 /*                                                                        */
 /*    _gx_scroll_wheel_event_process                                      */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  02-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            renamed                     */
-/*                                            GX_STYLE_SCROLL_WHEEL_DRAG  */
-/*                                            to GX_STATUS_TRACKING_PEN,  */
-/*                                            resulting in version 6.1.4  */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_scroll_wheel_pen_up_event_handler(GX_SCROLL_WHEEL *wheel)
 {
@@ -454,23 +422,6 @@ GX_RECTANGLE dirty;
 /*                                                                        */
 /*    Application Code                                                    */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  02-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            renamed                     */
-/*                                            GX_STYLE_SCROLL_WHEEL_DRAG  */
-/*                                            to GX_STATUS_TRACKING_PEN,  */
-/*                                            resulting in version 6.1.4  */
-/*  06-02-2021     Ting Zhu                 Modified comment(s),          */
-/*                                            updated with scroll wheel   */
-/*                                            control block change,       */
-/*                                            resulting in version 6.1.7  */
 /*                                                                        */
 /**************************************************************************/
 UINT _gx_scroll_wheel_event_process(GX_SCROLL_WHEEL *wheel, GX_EVENT *event_ptr)

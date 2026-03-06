@@ -3,7 +3,7 @@
    This demonstration illustrates how to implement slide and fade transtions when
    moving from screen to screen.
 
-   Actually, the work of doing most of the transitions can be done using just 
+   Actually, the work of doing most of the transitions can be done using just
    the GUIX Studio screen flow diagram, which generates the logic to implement slide and fade screen
    transitions for you. However, for the purpose of a tutorial, we have implemented the slide-in
    slide-out animations of the settings window in the application logic, and change the slide
@@ -215,7 +215,7 @@ GX_WIDGET *frame;
 
 }
 
-/* Event handler for the background window. Initializes the photo-drag 
+/* Event handler for the background window. Initializes the photo-drag
    animation, and catches the "Settings" button push.
 */
 UINT BackgroundWinEventProcess(GX_WINDOW *window, GX_EVENT *event_ptr)

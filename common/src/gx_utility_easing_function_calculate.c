@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -90,14 +91,6 @@ static UINT _gx_utility_pow_0_10_table[501] = {
 /*                                                                        */
 /*    _gx_utility_easing_function_calculate                               */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 #if defined(GX_EXPO_ELASTIC_EASING_SUPPORT)
 static INT _gx_utility_pow_0_10(INT b)
@@ -141,14 +134,6 @@ static INT _gx_utility_pow_0_10(INT b)
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_utility_easing_function_calculate                               */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_utility_bounce_ease_out(INT t, INT d, INT *return_tt, INT *return_dd)
@@ -224,14 +209,6 @@ INT dd;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_system_timer_update               Update active system timers   */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 UINT _gx_utility_easing_function_calculate(USHORT easing_function_type, INT start_val, INT end_val, INT t, INT d, INT *current_val)

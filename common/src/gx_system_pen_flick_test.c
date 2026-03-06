@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -58,17 +59,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_system_event_send                 Send GUIX event               */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  04-25-2022     Ting Zhu                 Modified comment(s),          */
-/*                                            added a new parameter,      */
-/*                                            resulting in version 6.1.11 */
 /*                                                                        */
 /**************************************************************************/
 VOID _gx_system_pen_flick_test(GX_WIDGET *target)

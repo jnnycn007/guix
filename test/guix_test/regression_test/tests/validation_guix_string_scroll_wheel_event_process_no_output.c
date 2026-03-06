@@ -23,7 +23,7 @@ static VOID      control_thread_entry(ULONG);
 VOID tx_application_define(void *first_unused_memory)
 {
     /* Create a dedicated thread to perform various operations
-       on the pixelmap drawing example. These operations simulate 
+       on the pixelmap drawing example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 

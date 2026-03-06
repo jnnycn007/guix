@@ -1,5 +1,6 @@
 /***************************************************************************
  * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
  *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
@@ -65,14 +66,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_display_driver_4444argb_horizontal_pixelmap_line_draw           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_4444argb_horizontal_pixelmap_line_alpha_blend(GX_DRAW_CONTEXT *context,
@@ -162,14 +155,6 @@ VOID             (*blend_func)(GX_DRAW_CONTEXT *context, INT x, INT y, GX_COLOR 
 /*                                                                        */
 /*    _gx_display_driver_4444argb_horizontal_pixelmap_line_draw           */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_4444argb_horizontal_pixelmap_line_raw_blend(GX_DRAW_CONTEXT *context,
                                                                            INT xstart, INT xend, INT y, GX_FILL_PIXELMAP_INFO *info, GX_UBYTE alpha)
@@ -252,14 +237,6 @@ VOID             (*blend_func)(GX_DRAW_CONTEXT *context, INT x, INT y, GX_COLOR 
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_display_driver_4444argb_horizontal_pixelmap_line_draw           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_4444argb_horizontal_pixelmap_line_compressed_alpha_blend(GX_DRAW_CONTEXT *context,
@@ -403,14 +380,6 @@ VOID             (*blend_func)(GX_DRAW_CONTEXT *context, INT x, INT y, GX_COLOR 
 /*                                                                        */
 /*    _gx_display_driver_4444argb_horizontal_pixelmap_line_draw           */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_4444argb_horizontal_pixelmap_line_compressed_blend(GX_DRAW_CONTEXT *context,
                                                                                   INT xstart, INT xend, INT y, GX_FILL_PIXELMAP_INFO *info, GX_UBYTE alpha)
@@ -538,14 +507,6 @@ VOID             (*blend_func)(GX_DRAW_CONTEXT *context, INT x, INT y, GX_COLOR 
 /*                                                                        */
 /*    _gx_display_driver_4444argb_horizontal_pixelmap_line_draw           */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_4444argb_horizontal_pixelmap_line_alpha_write(GX_DRAW_CONTEXT *context,
                                                                              INT xstart, INT xend, INT y, GX_FILL_PIXELMAP_INFO *info)
@@ -633,14 +594,6 @@ VOID             (*blend_func)(GX_DRAW_CONTEXT *context, INT x, INT y, GX_COLOR 
 /*                                                                        */
 /*    _gx_display_driver_4444argb_horizontal_pixelmap_line_draw           */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_4444argb_horizontal_pixelmap_line_raw_write(GX_DRAW_CONTEXT *context,
                                                                            INT xstart, INT xend, INT y, GX_FILL_PIXELMAP_INFO *info)
@@ -718,14 +671,6 @@ GX_PIXELMAP     *pixelmap;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_display_driver_4444argb_horizontal_pixelmap_line_draw           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_4444argb_horizontal_pixelmap_line_compressed_alpha_write(GX_DRAW_CONTEXT *context,
@@ -862,14 +807,6 @@ VOID             (*blend_func)(GX_DRAW_CONTEXT *context, INT x, INT y, GX_COLOR 
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_display_driver_4444argb_horizontal_pixelmap_line_draw           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_4444argb_horizontal_pixelmap_line_compressed_write(GX_DRAW_CONTEXT *context,
@@ -1019,14 +956,6 @@ GX_PIXELMAP     *pixelmap;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 VOID _gx_display_driver_4444argb_horizontal_pixelmap_line_draw(GX_DRAW_CONTEXT *context,

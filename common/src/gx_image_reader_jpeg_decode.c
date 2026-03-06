@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -120,18 +121,6 @@
 /*                                                                        */
 /*    _gx_image_reader_jpeg_decode                                        */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2022     Kenneth Maxwell          Modified comment(s),          */
-/*                                            prevented underflow from    */
-/*                                            bad input data,             */
-/*                                            resulting in version 6.2.0  */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_jpeg_quantization_table_set(GX_JPEG_INFO *jpeg_info, UINT segment_len)
 {
@@ -209,21 +198,6 @@ INT       index;
 /*    _gx_image_reader_jpeg_dc_decode                                     */
 /*    _gx_image_reader_jpeg_ac_decode                                     */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2022     Kenneth Maxwell          Modified comment(s),          */
-/*                                            changed bit_count to        */
-/*                                            GX_VALUE data type,         */
-/*                                            resulting in version 6.2.0  */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            improved logic,             */
-/*                                            resulting in version 6.3.0  */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_jpeg_huffcode_find(GX_JPEG_INFO *jpeg_info,
                                                 UINT table_class,
@@ -290,21 +264,6 @@ GX_HUFFCODE_INFO *code_info;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_jpeg_decode_blocks                                 */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2022     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added range test to prevent */
-/*                                            underflow,                  */
-/*                                            resulting in version 6.2.0  */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            improved logic,             */
-/*                                            resulting in version 6.3.0  */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_huffman_table_set(GX_JPEG_INFO *jpeg_info, UINT segment_len)
@@ -411,14 +370,6 @@ USHORT            code = 0;
 /*                                                                        */
 /*    _gx_image_reader_jpeg_decode_blocks                                 */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_jpeg_frame_header_read(GX_JPEG_INFO *jpeg_info, UINT segment_len)
 {
@@ -507,14 +458,6 @@ INT       i_component;
 /*                                                                        */
 /*    _gx_image_reader_jpeg_decode_blocks                                 */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_jpeg_scan_header_read(GX_JPEG_INFO *jpeg_info, UINT segment_len)
 {
@@ -583,20 +526,6 @@ INT       index;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_jpeg_one_block_decode                              */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2022     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added range test,           */
-/*                                            resulting in version 6.2.0  */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            improved logic,             */
-/*                                            resulting in version 6.3.0  */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_jpeg_dc_decode(GX_JPEG_INFO *jpeg_info, UINT i_component)
@@ -683,20 +612,6 @@ GX_BOOL  negative;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_jpeg_one_block_decode                              */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2022     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added range test,           */
-/*                                            resulting in version 6.2.0  */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            improved logic,             */
-/*                                            resulting in version 6.3.0  */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_jpeg_ac_decode(GX_JPEG_INFO *jpeg_info, UINT i_component)
@@ -885,12 +800,6 @@ INT      negative;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_jpeg_one_block_decode                              */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_jpeg_dequantize_idct(INT *block, INT *quant_table, GX_BYTE *out, INT stride)
@@ -1127,17 +1036,6 @@ int16_t const    *base;
 /*                                                                        */
 /*    _gx_image_reader_jpeg_2d_idct                                       */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            improved logic,             */
-/*                                            resulting in version 6.3.0  */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_jpeg_1d_idct(INT *input_data, INT *output_data, INT post_scale, INT round)
 {
@@ -1219,23 +1117,6 @@ INT t;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_jpeg_one_block_decode                              */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2022     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added range check for       */
-/*                                            stride, changed return val, */
-/*                                            added range check for       */
-/*                                            table_index,                */
-/*                                            resulting in version 6.2.0  */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            improved logic,             */
-/*                                            resulting in version 6.3.0  */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_jpeg_dequantize_idct(INT *block, INT *quant_table, GX_BYTE *out, INT stride)
@@ -1320,21 +1201,6 @@ INT                      row;
 /*                                                                        */
 /*    _gx_image_reader_jpeg_decode                                        */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2022     Kenneth Maxwell          Modified comment(s),          */
-/*                                            returned result of          */
-/*                                            dequantize_idct,            */
-/*                                            resulting in version 6.2.0  */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            improved logic,             */
-/*                                            resulting in version 6.3.0  */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_jpeg_one_block_decode(GX_JPEG_INFO *jpeg_info, UINT i_component, GX_BYTE *block_data)
 {
@@ -1418,12 +1284,6 @@ INT stride;
 /*    _gx_image_reader_jpeg_one_mcu_write                                 */
 /*    _gx_image_reader_jpeg_one_mcu_rotated_write                         */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_jpeg_24xrgb_pixel_write_helium(GX_JPEG_INFO *jpeg_info, uint8x16_t vred, uint8x16_t vgreen, uint8x16_t vblue, INT size)
 {
@@ -1470,12 +1330,6 @@ INT index;
 /*                                                                        */
 /*    _gx_image_reader_jpeg_one_mcu_write                                 */
 /*    _gx_image_reader_jpeg_one_mcu_rotated_write                         */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_jpeg_24xrgb_pixel_write(GX_JPEG_INFO *jpeg_info, GX_UBYTE red, GX_UBYTE green, GX_UBYTE blue)
@@ -1525,12 +1379,6 @@ static VOID _gx_image_reader_jpeg_24xrgb_pixel_write(GX_JPEG_INFO *jpeg_info, GX
 /*                                                                        */
 /*    _gx_image_reader_jpeg_one_mcu_write                                 */
 /*    _gx_image_reader_jpeg_one_mcu_rotated_write                         */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_jpeg_24bpp_pixel_write_helium(GX_JPEG_INFO *jpeg_info, uint8x16_t vred, uint8x16_t vgreen, uint8x16_t vblue, INT size)
@@ -1590,12 +1438,6 @@ mve_pred16_t      p;
 /*    _gx_image_reader_jpeg_one_mcu_write                                 */
 /*    _gx_image_reader_jpeg_one_mcu_rotated_write                         */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_jpeg_24bpp_pixel_write(GX_JPEG_INFO *jpeg_info, GX_UBYTE red, GX_UBYTE green, GX_UBYTE blue)
 {
@@ -1650,12 +1492,6 @@ static VOID _gx_image_reader_jpeg_24bpp_pixel_write(GX_JPEG_INFO *jpeg_info, GX_
 /*                                                                        */
 /*    _gx_image_reader_jpeg_one_mcu_write                                 */
 /*    _gx_image_reader_jpeg_one_mcu_rotated_write                         */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_jpeg_565rgb_pixel_write_helium(GX_JPEG_INFO *jpeg_info, uint8x16_t vred, uint8x16_t vgreen, uint8x16_t vblue, INT size)
@@ -1741,12 +1577,6 @@ GX_UBYTE     blue[16];
 /*    _gx_image_reader_jpeg_one_mcu_write                                 */
 /*    _gx_image_reader_jpeg_one_mcu_rotated_write                         */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_jpeg_565rgb_pixel_write(GX_JPEG_INFO *jpeg_info, GX_UBYTE red, GX_UBYTE green, GX_UBYTE blue)
 {
@@ -1805,12 +1635,6 @@ static VOID _gx_image_reader_jpeg_565rgb_pixel_write(GX_JPEG_INFO *jpeg_info, GX
 /*                                                                        */
 /*    _gx_image_reader_jpeg_one_mcu_write                                 */
 /*    _gx_image_reader_jpeg_one_mcu_rotated_write                         */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_jpeg_1555xrgb_pixel_write_helium(GX_JPEG_INFO *jpeg_info, uint8x16_t vred, uint8x16_t vgreen, uint8x16_t vblue, INT size)
@@ -1896,12 +1720,6 @@ GX_UBYTE     blue[16];
 /*    _gx_image_reader_jpeg_one_mcu_write                                 */
 /*    _gx_image_reader_jpeg_one_mcu_rotated_write                         */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_image_reader_jpeg_1555xrgb_pixel_write(GX_JPEG_INFO *jpeg_info, GX_UBYTE red, GX_UBYTE green, GX_UBYTE blue)
 {
@@ -1957,12 +1775,6 @@ static VOID _gx_image_reader_jpeg_1555xrgb_pixel_write(GX_JPEG_INFO *jpeg_info, 
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_jpeg_decompress                                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_jpeg_pixel_write_info_set(GX_JPEG_INFO *jpeg_info)
@@ -2078,19 +1890,6 @@ static UINT _gx_image_reader_jpeg_pixel_write_info_set(GX_JPEG_INFO *jpeg_info)
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_jpeg_decode                                        */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            added Helium support,       */
-/*                                            added partial canvas buffer */
-/*                                            support,                    */
-/*                                            resulting in version 6.3.0  */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_jpeg_one_mcu_write(GX_JPEG_INFO *jpeg_info, INT xpos, INT ypos, INT h, INT v)
@@ -2246,12 +2045,6 @@ INT        blue;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_jpeg_decode                                        */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  10-31-2023     Ting Zhu                 Initial Version 6.3.0         */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_jpeg_one_mcu_rotated_write(GX_JPEG_INFO *jpeg_info, INT xpos, INT ypos, INT h, INT v)
@@ -2445,20 +2238,6 @@ GX_BYTE    sign = 1;
 /*                                                                        */
 /*    _gx_image_reader_jpeg_decode                                        */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2022     Kenneth Maxwell          Modified comment(s),          */
-/*                                            abort if block decode fails,*/
-/*                                            resulting in version 6.2.0  */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            improved logic,             */
-/*                                            resulting in version 6.3.0  */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_jpeg_decompress(GX_JPEG_INFO *jpeg_info)
 {
@@ -2566,17 +2345,6 @@ UINT (*one_mcu_write)(GX_JPEG_INFO *jpeg_info, INT xpos, INT ypos, INT h, INT v)
 /*                                                                        */
 /*    _gx_image_reader_jpeg_decode                                        */
 /*    _gx_image_reader_jpeg_mcu_decode                                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2023     Ting Zhu                 Modified comment(s), removed  */
-/*                                            huffman table free logic,   */
-/*                                            resulting in version 6.3.0  */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_jpeg_decode_blocks(GX_JPEG_INFO *jpeg_info)
@@ -2707,17 +2475,6 @@ UINT      status = GX_SUCCESS;
 /*                                                                        */
 /*    _gx_image_reader_image_decode                                       */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            improved logic,             */
-/*                                            resulting in version 6.3.0  */
-/*                                                                        */
 /**************************************************************************/
 UINT _gx_image_reader_jpeg_decode(GX_IMAGE_READER *image_reader, GX_PIXELMAP *outmap)
 {
@@ -2815,17 +2572,6 @@ GX_JPEG_INFO *jpeg_info;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            improved logic,             */
-/*                                            resulting in version 6.3.0  */
 /*                                                                        */
 /**************************************************************************/
 UINT _gx_image_reader_jpeg_mcu_decode(GX_CONST GX_UBYTE *read_data, ULONG data_size,

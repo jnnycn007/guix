@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -61,12 +62,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_horizontal_list_scroll                                          */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  08-02-2021     Ting Zhu                 Initial Version 6.1.8         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_horizontal_list_invisible_page_scroll(GX_HORIZONTAL_LIST *list, INT num_pages)
@@ -177,17 +172,6 @@ INT maximum_scroll_pages;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_horizontal_list_event_process                                   */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  08-02-2021     Ting Zhu                 Modified comment(s),          */
-/*                                            fixed scroll overflow issue,*/
-/*                                            resulting in version 6.1.8  */
 /*                                                                        */
 /**************************************************************************/
 VOID _gx_horizontal_list_scroll(GX_HORIZONTAL_LIST *list, INT amount)

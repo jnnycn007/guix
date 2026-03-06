@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -62,14 +63,6 @@ extern VOID _gx_image_reader_rgb2gray(GX_PIXEL *pixel, GX_UBYTE *gray);
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_8bit_alpha_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
 {
@@ -118,14 +111,6 @@ GX_UBYTE *palpha;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_8bit_palette_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
@@ -186,14 +171,6 @@ INT       palindex;
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_24xrgb_pixel_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
 {
@@ -245,12 +222,6 @@ GX_COLOR *pLine;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  02-02-2021     Kenneth Maxwell          Initial Version 6.1.4         */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_24xrgb_rotated_pixel_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
@@ -310,14 +281,6 @@ GX_COLOR *pLine;
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_32argb_pixel_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
 {
@@ -368,14 +331,6 @@ GX_COLOR *pLine;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_565rgb_rle_pixel_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
@@ -450,14 +405,6 @@ GX_UBYTE *pAlpha;
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_565rgb_pixel_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
 {
@@ -517,15 +464,6 @@ GX_UBYTE *pAlpha;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*  03-02-2021     Ting Zhu                 Modified comment(s),          */
-/*                                            improved logic,             */
-/*                                            resulting in version 6.1.5  */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_565rgb_rotated_pixel_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
@@ -598,14 +536,6 @@ GX_UBYTE *pAlpha;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_1555xrgb_rle_pixel_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
@@ -681,14 +611,6 @@ GX_UBYTE *pAlpha;
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_1555xrgb_pixel_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
 {
@@ -750,14 +672,6 @@ GX_UBYTE *pAlpha;
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_4444argb_pixel_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
 {
@@ -815,14 +729,6 @@ USHORT *pLine;
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_4444argb_transparent_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
 {
@@ -879,14 +785,6 @@ USHORT *pLine;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_4bit_grayscale_pixel_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
@@ -959,14 +857,6 @@ GX_UBYTE  color;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_4bit_grayscale_transparent_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
@@ -1086,14 +976,6 @@ GX_UBYTE  color;
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_monochrome_pixel_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
 {
@@ -1183,14 +1065,6 @@ GX_UBYTE  color;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_monochrome_transparent_write(GX_IMAGE_READER *image_reader, GX_PIXEL *pixel)
@@ -1308,15 +1182,6 @@ GX_UBYTE  color;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_pixel_write_callback_set                           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*  02-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added 24xrgb format support,*/
-/*                                            resulting in version 6.1.4  */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_image_reader_pixel_rotated_write_callback_set(GX_IMAGE_READER *image_reader, GX_PIXELMAP *outmap)
@@ -1452,17 +1317,6 @@ static UINT _gx_image_reader_pixel_rotated_write_callback_set(GX_IMAGE_READER *i
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_image_reader_colorspace_convert                                 */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  12-31-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            supported rotation mode,    */
-/*                                            resulting in version 6.1.3  */
 /*                                                                        */
 /**************************************************************************/
 UINT _gx_image_reader_pixel_write_callback_set(GX_IMAGE_READER *image_reader, GX_PIXELMAP *outmap)

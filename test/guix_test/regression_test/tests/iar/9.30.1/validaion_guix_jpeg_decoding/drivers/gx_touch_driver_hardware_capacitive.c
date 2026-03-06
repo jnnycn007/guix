@@ -69,8 +69,8 @@ VOID SendPenUpEvent(VOID)
 }
 
 /*
-  *                     ReadBuffer [0]: The Byte count (0x0A)   
-  *                     ReadBuffer [1]: X1 coordinate [15,8]  
+  *                     ReadBuffer [0]: The Byte count (0x0A)
+  *                     ReadBuffer [1]: X1 coordinate [15,8]
   *                     ReadBuffer [2]: X1 coordinate [7,0]
   *                     ReadBuffer [3]: Y1 coordinate [15,8]
   *                     ReadBuffer [4]: Y1 coordinate [7,0]
@@ -78,7 +78,7 @@ VOID SendPenUpEvent(VOID)
   *                     ReadBuffer [6]: X2 coordinate [7,0]
   *                     ReadBuffer [7]: Y2 coordinate [15,8]
   *                     ReadBuffer [8]: Y2 coordinate [7,0]
-  *                     ReadBuffer [9]: Gesture command (01: Zoom In 02: Zoom out) 
+  *                     ReadBuffer [9]: Gesture command (01: Zoom In 02: Zoom out)
   *                     ReadBuffer [10]: unused byte
 */
 VOID  touch_thread_entry(ULONG thread_input)

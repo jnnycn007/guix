@@ -52,7 +52,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-       on the line drawing example. These operations simulate 
+       on the line drawing example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 }
@@ -661,13 +661,13 @@ GX_STRING                   string;
     status = gx_canvas_pixelmap_draw(0, 0, &pixelmap); //should return GX_INVALID_CONTEXT
     EXPECT_EQ(GX_SUCCESS, status);
     
-    status = gx_canvas_pixelmap_get(0); //should return GX_PTR_ERROR   
+    status = gx_canvas_pixelmap_get(0); //should return GX_PTR_ERROR
     EXPECT_EQ(GX_PTR_ERROR, status);
 
     _gx_system_current_draw_context = &default_context;
     default_context.gx_draw_context_canvas = &canvas;
     default_context.gx_draw_context_display = &display;
-    status = gx_canvas_pixelmap_get(&pixelmap); //should return GX_PTR_ERROR   
+    status = gx_canvas_pixelmap_get(&pixelmap); //should return GX_PTR_ERROR
     EXPECT_EQ(GX_SUCCESS, status);
         
     status = gx_canvas_pixelmap_rotate(0, 0, 0, 0, 0, 0); //should return GX_PTR_ERROR
@@ -840,12 +840,12 @@ GX_STRING                   string;
 
     parent.gx_widget_type = GX_TYPE_WIDGET;
     checkbox.gx_widget_type = 0;
-    status = gx_checkbox_select(&checkbox);// should return GX_INVALID_WIDGET    
+    status = gx_checkbox_select(&checkbox);// should return GX_INVALID_WIDGET
     EXPECT_EQ(GX_INVALID_WIDGET, status);
 
     checkbox.gx_widget_parent = &parent;
     checkbox.gx_widget_type = GX_TYPE_CHECKBOX;
-    status = gx_checkbox_select(&checkbox);// should return GX_SUCCESS        
+    status = gx_checkbox_select(&checkbox);// should return GX_SUCCESS
     EXPECT_EQ(GX_SUCCESS, status);
 
     /* circular gauge */
@@ -929,16 +929,16 @@ GX_STRING                   string;
     
     _gx_system_current_draw_context = GX_NULL; // following functions need the _gx_system_current_draw_context to be NULL
     // start
-    status = gx_context_brush_get(&brush); // should return GX_INVALID_CONTEXT   
+    status = gx_context_brush_get(&brush); // should return GX_INVALID_CONTEXT
     EXPECT_EQ(GX_INVALID_CONTEXT, status);
     
-    status = gx_context_brush_pattern_set(0); // should return GX_INVALID_CONTEXT   
+    status = gx_context_brush_pattern_set(0); // should return GX_INVALID_CONTEXT
     EXPECT_EQ(GX_INVALID_CONTEXT, status);
     
     status = gx_context_brush_set(0); //should return GX_PTR_ERROR
     EXPECT_EQ(GX_PTR_ERROR, status);
 
-    status = gx_context_brush_set(&default_context.gx_draw_context_brush); //should return GX_INVALID_CONTEXT   
+    status = gx_context_brush_set(&default_context.gx_draw_context_brush); //should return GX_INVALID_CONTEXT
     EXPECT_EQ(GX_INVALID_CONTEXT, status);
     
     status = gx_context_brush_style_set(0);//should return GX_INVALID_CONTEXT
@@ -965,7 +965,7 @@ GX_STRING                   string;
     status = gx_context_font_set(0);//should return GX_INVALID_CONTEXT
     EXPECT_EQ(GX_INVALID_CONTEXT, status);
     
-    status = gx_context_line_color_set(1);//should return GX_INVALID_CONTEXT 
+    status = gx_context_line_color_set(1);//should return GX_INVALID_CONTEXT
     EXPECT_EQ(GX_INVALID_CONTEXT, status);
     
     status = gx_context_pixelmap_get(1, 0);//should return GX_PTR_ERROR
@@ -1025,7 +1025,7 @@ GX_STRING                   string;
     status = gx_display_create(0, 0, 0, 0, 0); // should return GX_PTR_ERROR
     EXPECT_EQ(GX_PTR_ERROR, status);
 
-    status = _gxe_display_create(&display, "linux_display", gx_validation_display_driver_setup_24xrgb, 0, 0, 0); // Should return GX_INVALID_SIZE 
+    status = _gxe_display_create(&display, "linux_display", gx_validation_display_driver_setup_24xrgb, 0, 0, 0); // Should return GX_INVALID_SIZE
     EXPECT_EQ(GX_INVALID_SIZE, status);
     
     /* display delete coverage */
@@ -1097,7 +1097,7 @@ GX_STRING                   string;
     EXPECT_EQ(GX_SUCCESS, status);
 #endif
     
-    status = gx_display_theme_install(0, 0);//should return GX_INVALID_DISPLAY   
+    status = gx_display_theme_install(0, 0);//should return GX_INVALID_DISPLAY
     EXPECT_EQ(GX_INVALID_DISPLAY, status);
 
     status = gx_display_theme_install(&display, 0);//should return GX_PTR_ERROR
@@ -1223,10 +1223,10 @@ GX_STRING                   string;
     EXPECT_EQ(GX_INVALID_VALUE, status);
     
     memset(&scrollbar, 0, sizeof(GX_SCROLLBAR));
-    status = gx_horizontal_scrollbar_create(0, 0, 0, 0, 0);//should return GX_PTR_ERROR  
+    status = gx_horizontal_scrollbar_create(0, 0, 0, 0, 0);//should return GX_PTR_ERROR
     EXPECT_EQ(GX_PTR_ERROR, status);
 
-    status = _gxe_horizontal_scrollbar_create(&scrollbar, 0, 0, 0, 0, 0);//should return GX_INVALID_SIZE  
+    status = _gxe_horizontal_scrollbar_create(&scrollbar, 0, 0, 0, 0, 0);//should return GX_INVALID_SIZE
     EXPECT_EQ(GX_INVALID_SIZE, status);
 
     scrollbar.gx_widget_type = GX_TYPE_HORIZONTAL_SCROLL;
@@ -1236,7 +1236,7 @@ GX_STRING                   string;
     /* icon */
     printf("icon button\n");
     memset(&icon_button, 0, sizeof(GX_ICON_BUTTON));
-    status = gx_icon_button_create(&icon_button, 0, 0, 0, 0, 0, 0); //should return GX_PTR_ERROR  
+    status = gx_icon_button_create(&icon_button, 0, 0, 0, 0, 0, 0); //should return GX_PTR_ERROR
     EXPECT_EQ(GX_PTR_ERROR, status);
 
     status = _gxe_icon_button_create(&icon_button, 0, 0, 0, 0, 0, &size, 0);//should return GX_INVALID_SIZE
@@ -1250,28 +1250,28 @@ GX_STRING                   string;
     status = gx_icon_button_create(&icon_button, 0, 0, 0, 0, 0, &size);// parent is NULL
     EXPECT_EQ(GX_SUCCESS, status);
 
-    status = gx_icon_button_pixelmap_set(0, 1);//should return GX_PTR_ERROR  
+    status = gx_icon_button_pixelmap_set(0, 1);//should return GX_PTR_ERROR
     EXPECT_EQ(GX_PTR_ERROR, status);
     
     /* icon */
     printf("icon\n");
     memset(&icon, 0, sizeof(GX_ICON));
-    status = gx_icon_create(0, 0, 0, 0, 0, 0, 0, 0); // should return GX_PTR_ERROR  
+    status = gx_icon_create(0, 0, 0, 0, 0, 0, 0, 0); // should return GX_PTR_ERROR
     EXPECT_EQ(GX_PTR_ERROR, status);
 
-    status = _gxe_icon_create(&icon, 0, 0, 0, 0, 0, 0, 0, 0); // should return GX_INVALID_SIZE  
+    status = _gxe_icon_create(&icon, 0, 0, 0, 0, 0, 0, 0, 0); // should return GX_INVALID_SIZE
     EXPECT_EQ(GX_INVALID_SIZE, status);
 
     icon.gx_widget_type = GX_TYPE_ICON;
-    status = gx_icon_create(&icon, 0, 0, 0, 0, 0, 0, 0); // should return GX_PTR_ERROR  
+    status = gx_icon_create(&icon, 0, 0, 0, 0, 0, 0, 0); // should return GX_PTR_ERROR
     EXPECT_EQ(GX_ALREADY_CREATED, status);
     
-    status = gx_icon_event_process(&icon, 0); //should return GX_PTR_ERROR  
+    status = gx_icon_event_process(&icon, 0); //should return GX_PTR_ERROR
     EXPECT_EQ(GX_PTR_ERROR, status);
 
     icon.gx_widget_parent = 0;
     my_event.gx_event_type = 0;
-    status = gx_icon_event_process(&icon, &my_event); //should return GX_PTR_ERROR  
+    status = gx_icon_event_process(&icon, &my_event); //should return GX_PTR_ERROR
     EXPECT_EQ(GX_SUCCESS, status);
     
     status = gx_icon_pixelmap_set(0, 0, 0); //should return GX_PTR_ERROR
@@ -1877,7 +1877,7 @@ GX_STRING                   string;
     status = gx_prompt_text_id_set(&prompt, 1);
     EXPECT_EQ(GX_SUCCESS, status);
     
-    status = gx_prompt_text_set(0,  (GX_CONST GX_CHAR *)byte_data);//should return GX_PTR_ERROR 
+    status = gx_prompt_text_set(0,  (GX_CONST GX_CHAR *)byte_data);//should return GX_PTR_ERROR
     EXPECT_EQ(GX_PTR_ERROR, status);
 
     prompt.gx_widget_style = GX_STYLE_TEXT_COPY;
@@ -2677,7 +2677,7 @@ GX_STRING                   string;
     slider_info.gx_slider_info_max_val = 10;
     slider_info.gx_slider_info_min_val = 0;    
     slider_info.gx_slider_info_current_val = 5;
-    status = gx_slider_value_calculate(&slider, &slider_info, 5); //should return GX_INVALID_VALUE    
+    status = gx_slider_value_calculate(&slider, &slider_info, 5); //should return GX_INVALID_VALUE
     EXPECT_EQ(GX_SUCCESS, status);
 
     slider_info.gx_slider_info_max_val = 5;
@@ -2743,24 +2743,24 @@ GX_STRING                   string;
     EXPECT_EQ(GX_PTR_ERROR, status);
 
     sprite.gx_widget_type = 0;
-    status = gx_sprite_start(&sprite, 0);  //should return GX_INVALID_WIDGET    
+    status = gx_sprite_start(&sprite, 0);  //should return GX_INVALID_WIDGET
     EXPECT_EQ(GX_INVALID_WIDGET, status);
 
     memset(&sprite, 0, sizeof(GX_SPRITE));
     sprite.gx_widget_type = GX_TYPE_SPRITE;
-    status = gx_sprite_start(&sprite, 0);  //should return GX_FAILURE   
+    status = gx_sprite_start(&sprite, 0);  //should return GX_FAILURE
     EXPECT_EQ(GX_FAILURE, status);
   
     status = gx_sprite_stop(0);  //should return GX_PTR_ERROR
     EXPECT_EQ(GX_PTR_ERROR, status);
 
     sprite.gx_widget_type = 0;
-    status = gx_sprite_stop(&sprite);  //should return GX_INVALID_WIDGET    
+    status = gx_sprite_stop(&sprite);  //should return GX_INVALID_WIDGET
     EXPECT_EQ(GX_INVALID_WIDGET, status);
 
     sprite.gx_sprite_run_state = 1; //GX_SPRITE_IDLE
     sprite.gx_widget_type = GX_TYPE_SPRITE;
-    status = gx_sprite_stop(&sprite);  //should return GX_SUCCESS    
+    status = gx_sprite_stop(&sprite);  //should return GX_SUCCESS
     EXPECT_EQ(GX_SUCCESS, status);
     
     /* string scroll wheel */
@@ -2917,7 +2917,7 @@ GX_STRING                   string;
     status = gx_system_pen_configure(0); //should return GX_PTR_ERROR
     EXPECT_EQ(GX_PTR_ERROR, status);
 
-    status = gx_system_pen_configure(&pen_config); //should return GX_SUCCESS    
+    status = gx_system_pen_configure(&pen_config); //should return GX_SUCCESS
     EXPECT_EQ(GX_SUCCESS, status);
 
     status = gx_system_scroll_appearance_get(0, 0);//should return GX_PTR_ERROR
@@ -3844,7 +3844,7 @@ GX_STRING                   string;
     
     gx_widget_style_add(0, 0); //should return GX_PTR_ERROR
     widget.gx_widget_type = 0;
-    gx_widget_style_add(&widget, 0); //should return GX_INVALID_WIDGET    
+    gx_widget_style_add(&widget, 0); //should return GX_INVALID_WIDGET
     
     gx_widget_style_get(&widget, 0); //should return GX_PTR_ERROR
     widget.gx_widget_type = 0;
@@ -4275,7 +4275,7 @@ GX_STRING                   string;
     // should we test draw functions here? Because draw function will not return error.
     /* draw functions
     gx_display_create(&display, "linux_display", gx_validation_display_driver_setup_24xrgb, 0, 0); //create display
-    
+
     // draw functions
     gx_accordion_menu_draw(&accordion_menu); // draw
     gx_button_background_draw(&button);
@@ -4324,8 +4324,8 @@ GX_STRING                   string;
     gx_widget_text_id_draw(&widget, 0, 0, 0, 0, 0);
     gx_window_background_draw(&window);
     gx_window_draw(&window);
-    
-    
+
+
     gx_canvas_delete()
     gx_display_delete(&display, gx_validation_graphics_driver_cleanup_24xrgb);//delete display
 

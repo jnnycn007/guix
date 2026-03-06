@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -64,20 +65,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Application Code                                                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added line pointers set     */
-/*                                            loigc for dynamic bidi text,*/
-/*                                            resulting in version 6.1    */
-/*  01-31-2022     Ting Zhu                 Modified comment(s),          */
-/*                                            updated with new bidi text  */
-/*                                            reorder function call,      */
-/*                                            resulting in version 6.1.10 */
 /*                                                                        */
 /**************************************************************************/
 VOID _gx_multi_line_text_button_line_pointers_set(GX_MULTI_LINE_TEXT_BUTTON *button)

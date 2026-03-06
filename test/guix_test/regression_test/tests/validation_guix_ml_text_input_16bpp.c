@@ -9,7 +9,7 @@
 TEST_PARAM test_parameter = {
     "guix_ml_text_input_16bpp", /* Test name */
     30, 120, 245, 330  /* Define the coordinates of the capture area.
-                         In this test, we only need to capture the multi 
+                         In this test, we only need to capture the multi
                          line text input drawing area.  */
 };
 
@@ -28,7 +28,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-       on the multi line text input example. These operations simulate 
+       on the multi line text input example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 
@@ -62,7 +62,7 @@ int  text_alignment[]={GX_STYLE_TEXT_LEFT, GX_STYLE_TEXT_CENTER, GX_STYLE_TEXT_R
 int  key_event[] = {GX_KEY_UP_ARROW, GX_KEY_UP_ARROW, GX_KEY_DELETE, GX_KEY_DELETE, GX_KEY_DELETE, GX_KEY_BACKSPACE, GX_KEY_BACKSPACE};
 
 /* This thread simulates user input.  Its priority is lower
-   than the GUIX thread, so that GUIX finishes an operation 
+   than the GUIX thread, so that GUIX finishes an operation
    before this thread is able to issue the next command. */
 static VOID control_thread_entry(ULONG input)
 {
@@ -131,7 +131,7 @@ GX_MULTI_LINE_TEXT_INPUT *text_input;
 
         for(key_value = 0x21; key_value <= 0x7e; key_value++)
         {      
-            /* Inform the validation system 
+            /* Inform the validation system
             (1) Frame ID, which identifies a specific test configuration;
             (2) Start recording frame on the next toggle operation.
             */
@@ -180,7 +180,7 @@ GX_MULTI_LINE_TEXT_INPUT *text_input;
         /* multi line text input scroll up. */
         for( ypos = 290; ypos >= 123; ypos -= 10)
         {
-            /* Inform the validation system 
+            /* Inform the validation system
             (1) Frame ID, which identifies a specific test configuration;
             (2) Start recording frame on the next toggle operation.
             */
@@ -209,7 +209,7 @@ GX_MULTI_LINE_TEXT_INPUT *text_input;
         /* multi line text input scroll down. */
         for(ypos = 150; ypos < 320; ypos += 10)
         {
-            /* Inform the validation system 
+            /* Inform the validation system
             (1) Frame ID, which identifies a specific test configuration;
             (2) Start recording frame on the next toggle operation.
             */

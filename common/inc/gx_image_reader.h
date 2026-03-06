@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -35,27 +36,6 @@
 /*    This file defines the GUIX image reader management component,       */
 /*    including all data types and external references.  It is assumed    */
 /*    that gx_api.h and gx_port.h have already been included.             */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  06-02-2021     Ting Zhu                 Modified comment(s), and      */
-/*                                            improved png decoding       */
-/*                                            performance,                */
-/*                                            resulting in version 6.1.7  */
-/*  10-31-2022     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added definitions for fixed */
-/*                                            size table dimensions,      */
-/*                                            resulting in version 6.2.0  */
-/*  10-31-2023     Ting Zhu                 Modified comment(s), added    */
-/*                                            support for ARM Helium,     */
-/*                                            added partial canvas buffer */
-/*                                            support,                    */
-/*                                            resulting in version 6.3.0  */
 /*                                                                        */
 /**************************************************************************/
 #if defined(GX_SOFTWARE_DECODER_SUPPORT)

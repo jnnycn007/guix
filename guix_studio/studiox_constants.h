@@ -88,9 +88,9 @@ enum TARGET_TOOLS {
 
 #define GX_VERSION_WITH_GENERIC_SCROLL_WHEEL   60107
 
-// The 6.1.6 GUIX release is decided as official 
+// The 6.1.6 GUIX release is decided as official
 // ssp 2.0 release. For this release we no longer
-// require synergy custom fonts when running at 
+// require synergy custom fonts when running at
 // 8bpp palette mode, just use standard system fonts.
 
 #define GX_VERSION_SYNERGY_GLYPH_GEN_CHANGE  60106      // stop using custom synergy fonts, just use software glyph drawing

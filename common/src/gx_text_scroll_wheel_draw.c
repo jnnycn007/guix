@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -78,21 +79,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_text_scroll_wheel_row_draw                                      */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  06-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            rename RENESAS_DAVE2D       */
-/*                                            support conditional,        */
-/*                                            resulting in version 6.1.7  */
-/*  01-31-2022     Ting Zhu                 Modified comment(s),          */
-/*                                            removed alpha set,          */
-/*                                            resulting in version 6.1.10 */
 /*                                                                        */
 /**************************************************************************/
 static UINT  _gx_text_scroll_wheel_round_text_draw(GX_TEXT_SCROLL_WHEEL *wheel, GX_RESOURCE_ID tColor, GX_RESOURCE_ID font_id,
@@ -218,17 +204,6 @@ GX_COLOR    old_fill_color;
 /*                                                                        */
 /*    _gx_text_scroll_wheel_row_draw                                      */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  01-31-2022     Ting Zhu                 Modified comment(s),          */
-/*                                            removed alpha set,          */
-/*                                            resulting in version 6.1.10 */
-/*                                                                        */
 /**************************************************************************/
 static UINT  _gx_text_scroll_wheel_flat_text_draw(GX_TEXT_SCROLL_WHEEL *wheel, GX_RESOURCE_ID tColor, GX_RESOURCE_ID font_id,
                                                   GX_CONST GX_STRING *string, GX_VALUE x_pos, GX_VALUE y_pos, GX_VALUE width, GX_VALUE height)
@@ -309,19 +284,6 @@ GX_BRUSH *brush;
 /*                                                                        */
 /*    _gx_text_scroll_wheel_round_draw                                    */
 /*    _gx_text_scroll_wheel_flat_draw                                     */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  02-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            renamed                     */
-/*                                            GX_STYLE_SCROLL_WHEEL_DRAG  */
-/*                                            to GX_STATUS_TRACKING_PEN,  */
-/*                                            resulting in version 6.1.4  */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_text_scroll_wheel_row_draw(GX_TEXT_SCROLL_WHEEL *wheel, GX_RECTANGLE *selected_area, GX_RECTANGLE *draw_area, GX_CONST GX_STRING *string)
@@ -421,16 +383,6 @@ UINT           (*text_draw)(GX_TEXT_SCROLL_WHEEL *wheel, GX_RESOURCE_ID tColor, 
 /*                                                                        */
 /*    _gx_text_scroll_wheel_flat_draw                                     */
 /*    _gx_text_scroll_wheel_round_draw                                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  09-30-2020     Kenneth Maxwell          Initial Version 6.1           */
-/*  01-31-2022     Ting Zhu                 Modified comment(s),          */
-/*                                            updated with new bidi text  */
-/*                                            reorder function call,      */
-/*                                            resulting in version 6.1.10 */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_text_scroll_wheel_text_get(GX_TEXT_SCROLL_WHEEL *wheel, INT row, GX_STRING *string)
@@ -546,15 +498,6 @@ UINT status;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_text_scroll_wheel_draw                                          */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            improved logic,             */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_text_scroll_wheel_round_draw(GX_TEXT_SCROLL_WHEEL *wheel)
@@ -744,15 +687,6 @@ INT          row;
 /*                                                                        */
 /*    _gx_text_scroll_wheel_draw                                          */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            improved logic,             */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_text_scroll_wheel_flat_draw(GX_TEXT_SCROLL_WHEEL *wheel)
 {
@@ -887,14 +821,6 @@ UINT         status;
 /*                                                                        */
 /*    Application Code                                                    */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 VOID _gx_text_scroll_wheel_draw(GX_TEXT_SCROLL_WHEEL *wheel)

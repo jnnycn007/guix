@@ -171,7 +171,7 @@ GX_VALUE index = 0;
            }
            else
            {
-               /* Pop out two operands and one operation and push the calculate result to stack_operand, 
+               /* Pop out two operands and one operation and push the calculate result to stack_operand,
                   then push the current operation to the stack_operation. */
                if (stack_operand.top < 1)
                {

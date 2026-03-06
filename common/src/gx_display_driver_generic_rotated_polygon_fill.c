@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -64,12 +65,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_display_driver_generic_polygon_fill                             */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_polygon_min_max_get(GX_POINT *vertex, INT num, INT *xmin, INT *xmax, INT *ymin)
@@ -139,12 +134,6 @@ INT      y_min;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_display_driver_generic_polygon_fill                             */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_polygon_new_edge_table_init_90(GX_POINT *vertex, INT num, GX_POLYGON_EDGE *net, INT *net_size)
@@ -258,12 +247,6 @@ GX_VALUE        net_index = 0;
 /*                                                                        */
 /*    _gx_display_driver_generic_polygon_fill                             */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_polygon_new_edge_table_init_270(GX_POINT *vertex, INT num, GX_POLYGON_EDGE *net, INT *net_size)
 {
@@ -376,12 +359,6 @@ GX_VALUE        net_index = 0;
 /*                                                                        */
 /*    _gx_display_driver_generic_polygon_fill                             */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_polygon_active_edge_insert(GX_POLYGON_EDGE *aet, GX_POLYGON_EDGE *net, INT x, INT net_size, INT *aet_size)
 {
@@ -442,12 +419,6 @@ INT      active_edge_table_size = *aet_size;
 /*                                                                        */
 /*    _gx_display_driver_generic_polygon_fill                             */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_polygon_non_active_edge_remove(GX_POLYGON_EDGE *aet, INT x, INT *aet_size)
 {
@@ -505,12 +476,6 @@ INT j;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_display_driver_generic_polygon_fill                             */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_polygon_scan_line_draw(GX_DRAW_CONTEXT *context, GX_POLYGON_EDGE *aet, INT x, INT aet_size)
@@ -607,12 +572,6 @@ GX_COLOR      fill_color;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_display_driver_generic_polygon_fill                             */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_display_driver_polygon_pixelmap_scan_line_draw(GX_DRAW_CONTEXT *context, GX_POLYGON_EDGE *aet, INT aet_size,
@@ -723,12 +682,6 @@ GX_BOOL               is_drawn = GX_FALSE;
 /*                                                                        */
 /*    _gx_display_driver_generic_polygon_fill                             */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_display_driver_polygon_active_edge_table_update_and_restore(GX_POLYGON_EDGE *aet, INT aet_size)
 {
@@ -803,12 +756,6 @@ GX_POLYGON_EDGE temp;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Application Code                                                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  12-31-2020     Kenneth Maxwell          Initial Version 6.1.3         */
 /*                                                                        */
 /**************************************************************************/
 VOID _gx_display_driver_generic_rotated_polygon_fill(GX_DRAW_CONTEXT *context, GX_POINT *vertex, INT num)

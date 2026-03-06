@@ -165,7 +165,7 @@ VOID main_screen_draw(GX_WINDOW *window)
         decode_main_screen_jpeg();
     }
 
-    /* Unless something went wrong, the pixelmap data should now be populated in 
+    /* Unless something went wrong, the pixelmap data should now be populated in
        GUIX pixelmap format.  */
     if (main_screen_bg.gx_pixelmap_data)
     {

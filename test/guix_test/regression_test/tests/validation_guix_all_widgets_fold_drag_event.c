@@ -27,7 +27,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-       on the line drawing example. These operations simulate 
+       on the line drawing example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 
@@ -76,7 +76,7 @@ GX_WIDGET *searched_widget = GX_NULL;
     gx_system_widget_find(ID_WINDOW_SCREEN, 1, &searched_widget); // should return GX_SUCCESS
     gx_system_widget_find(ID_ANIMATION_CANVAS_ROOT_WINDOW + 1, 0, &searched_widget); // should return GX_SUCCESS
     gx_system_widget_find(ID_ANIMATION_CANVAS_ROOT_WINDOW, 0, &searched_widget); // should return GX_SUCCESS
-    gx_system_widget_find(ID_WINDOW_SCREEN, 1, &searched_widget); // should return GX_SUCCESS   
+    gx_system_widget_find(ID_WINDOW_SCREEN, 1, &searched_widget); // should return GX_SUCCESS
     
     memset(&my_event, 0, sizeof(GX_EVENT));
     my_event.gx_event_payload.gx_event_pointdata.gx_point_x = PEN_START_X;

@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -32,12 +33,6 @@
 /*                                                                        */
 /*    This file contains data type definitions and constants specific     */
 /*    to the implementation of high-performance GUIX UI framework.        */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
 /*                                                                        */
 /**************************************************************************/
 
@@ -110,7 +105,7 @@ typedef SHORT  GX_VALUE;
 #define GX_VALUE_MAX   0x7FFF
 
 
-/* For the win32 port, the entry point is WinMain, which is defined 
+/* For the win32 port, the entry point is WinMain, which is defined
    in the win32 driver file.  The entry point for GUIX demo is gx_main(). */
 #define main(a, b)                          gx_main(a, b)
 

@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -68,14 +69,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_multi_line_text_view_line_start_cache_update                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_multi_line_text_view_line_index_find(GX_MULTI_LINE_TEXT_VIEW *view, UINT start_line, UINT start_index, UINT search_line, UINT *return_index)
@@ -141,14 +134,6 @@ GX_MULTI_LINE_TEXT_INFO text_info;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_multi_line_text_view_line_start_cache_update                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_multi_line_text_view_line_start_cache_create(GX_MULTI_LINE_TEXT_VIEW *view, UINT first_line, UINT updated_size)
@@ -228,14 +213,6 @@ UINT                    loop;
 /*                                                                        */
 /*    _gx_multi_line_text_view_line_tail_cache_update                     */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_multi_line_text_view_line_tail_cache_create(GX_MULTI_LINE_TEXT_VIEW *view, UINT start_index, UINT start_line, UINT first_line, UINT updated_size)
 {
@@ -301,14 +278,6 @@ UINT                    loop;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_multi_line_text_view_line_cache_update                          */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_multi_line_text_view_line_start_cache_update(GX_MULTI_LINE_TEXT_VIEW *view, UINT new_first_cache_line)
@@ -382,14 +351,6 @@ UINT updated_size;
 /*                                                                        */
 /*    _gx_multi_line_text_view_line_cache_update                          */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static VOID _gx_multi_line_text_view_line_tail_cache_update(GX_MULTI_LINE_TEXT_VIEW *view, UINT new_first_cache_line)
 {
@@ -462,20 +423,6 @@ UINT last_cache_line;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    GUIX Internal Code                                                  */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            added logic to disable line */
-/*                                            cache process while dynamic */
-/*                                            bidi text is enabled,       */
-/*                                            resulting in version 6.1    */
-/*  03-02-2021     Ting Zhu                 Modified comment(s), fixed    */
-/*                                            line height calculation,    */
-/*                                            resulting in version 6.1.5  */
 /*                                                                        */
 /**************************************************************************/
 UINT _gx_multi_line_text_view_line_cache_update(GX_MULTI_LINE_TEXT_VIEW *view)

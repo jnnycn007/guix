@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -63,14 +64,6 @@
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_accordion_menu_shift_helper                                     */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static VOID _gx_accordion_menu_shift_helper(GX_ACCORDION_MENU *accordion, GX_WIDGET *animation_target, INT shift)
@@ -160,14 +153,6 @@ GX_RECTANGLE size;
 /*                                                                        */
 /*    _gx_accordion_menu_close_animation_update                           */
 /*    _gx_accordion_menu_open_animation_update                            */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_accordion_menu_shift(GX_ACCORDION_MENU *accordion, GX_WIDGET *animation_target, INT shift)
@@ -268,17 +253,6 @@ GX_WIDGET   *child;
 /*                                                                        */
 /*    _gx_accordion_menu_event_process                                    */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            added NULL pointer check,   */
-/*                                            resulting in version 6.3.0  */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_accordion_menu_close_animation_update(GX_ACCORDION_MENU *accordion)
 {
@@ -369,17 +343,6 @@ GX_WIDGET   *child;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    _gx_accordion_menu_event_process                                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*  10-31-2023     Ting Zhu                 Modified comment(s),          */
-/*                                            added NULL pointer check,   */
-/*                                            resulting in version 6.3.0  */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_accordion_menu_open_animation_update(GX_ACCORDION_MENU *accordion)
@@ -473,14 +436,6 @@ GX_WIDGET   *child;
 /*                                                                        */
 /*    Application Code                                                    */
 /*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
-/*                                                                        */
 /**************************************************************************/
 static UINT _gx_accordion_menu_pen_down_event_process(GX_ACCORDION_MENU *accordion, GX_EVENT *event_ptr)
 {
@@ -560,14 +515,6 @@ GX_WIDGET *child = GX_NULL;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Application Code                                                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 static UINT _gx_accordion_menu_pen_up_event_process(GX_ACCORDION_MENU *accordion, GX_EVENT *event_ptr)
@@ -662,14 +609,6 @@ GX_VALUE      y_shift;
 /*  CALLED BY                                                             */
 /*                                                                        */
 /*    Application Code                                                    */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  05-19-2020     Kenneth Maxwell          Initial Version 6.0           */
-/*  09-30-2020     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1    */
 /*                                                                        */
 /**************************************************************************/
 UINT _gx_accordion_menu_event_process(GX_ACCORDION_MENU *accordion, GX_EVENT *event_ptr)

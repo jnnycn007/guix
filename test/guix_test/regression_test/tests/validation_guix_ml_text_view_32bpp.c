@@ -9,7 +9,7 @@
 TEST_PARAM test_parameter = {
     "guix_ml_text_view_32bpp", /* Test name */
     20, 101, 264, 424  /* Define the coordinates of the capture area.
-                         In this test, we only need to capture the multi 
+                         In this test, we only need to capture the multi
                          line text view drawing area.  */
 };
 
@@ -31,7 +31,7 @@ VOID tx_application_define(void *first_unused_memory)
 {
 
     /* Create a dedicated thread to perform various operations
-       on the multi line text view example. These operations simulate 
+       on the multi line text view example. These operations simulate
        user input. */
     gx_validation_control_thread_create(control_thread_entry);
 
@@ -67,7 +67,7 @@ char ft_size[2][6]={"18pix", "24pix"};
 char text_b[] = "text B";
 
 /* This thread simulates user input.  Its priority is lower
-   than the GUIX thread, so that GUIX finishes an operation 
+   than the GUIX thread, so that GUIX finishes an operation
    before this thread is able to issue the next command. */
 static VOID control_thread_entry(ULONG input)
 {
@@ -95,7 +95,7 @@ int  pathlen;
     /* multi line text view scroll down. */
     for(ypos = 131; ypos < 388; ypos += 1)
     {
-        /* Inform the validation system 
+        /* Inform the validation system
         (1) Frame ID, which identifies a specific test configuration;
         (2) Start recording frame on the next toggle operation.
         */
@@ -127,7 +127,7 @@ int  pathlen;
     /* multi line text view scroll up */
     for(ypos = 388; ypos >= 131; ypos -= 10)
     {
-        /* Inform the validation system 
+        /* Inform the validation system
         (1) Frame ID, which identifies a specific test configuration;
         (2) Start recording frame on the next toggle operation.
         */

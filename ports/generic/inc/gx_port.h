@@ -1,10 +1,11 @@
 /***************************************************************************
- * Copyright (c) 2024 Microsoft Corporation 
- * 
+ * Copyright (c) 2024 Microsoft Corporation
+ * Copyright (c) 2026-present Eclipse ThreadX contributors
+ *
  * This program and the accompanying materials are made available under the
  * terms of the MIT License which is available at
  * https://opensource.org/licenses/MIT.
- * 
+ *
  * SPDX-License-Identifier: MIT
  **************************************************************************/
 
@@ -32,18 +33,6 @@
 /*                                                                        */
 /*    This file contains data type definitions and constants that work    */
 /*    generically on most compiler and processor architectures.           */
-/*                                                                        */
-/*  RELEASE HISTORY                                                       */
-/*                                                                        */
-/*    DATE              NAME                      DESCRIPTION             */
-/*                                                                        */
-/*  02-02-2021     Kenneth Maxwell          Initial Version 6.1.4         */
-/*  04-02-2021     Kenneth Maxwell          Modified comment(s),          */
-/*                                            resulting in version 6.1.6  */
-/*  08-02-2021     Kenneth Maxwell          Modified comment(s), removed  */
-/*                                            GX_SYSTEM_TIMER_TICKS and   */
-/*                                            GX_TICKS_SECOND definitions,*/
-/*                                            resulting in version 6.1.8  */
 /*                                                                        */
 /**************************************************************************/
 
