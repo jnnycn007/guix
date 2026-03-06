@@ -46,6 +46,9 @@
 /*                                                                        */
 /**************************************************************************/
 
+#ifndef GX_MULTI_LINE_TEXT_VIEW_H
+#define GX_MULTI_LINE_TEXT_VIEW_H
+
 /* Define multi-line text view management function prototypes. */
 UINT _gx_multi_line_text_view_create(GX_MULTI_LINE_TEXT_VIEW *text_view_ptr,
                                      GX_CONST GX_CHAR *name_ptr,
@@ -110,3 +113,4 @@ UINT _gxe_rich_text_view_create(GX_RICH_TEXT_VIEW *rich_view,
                                 UINT control_block_size);
 UINT _gxe_rich_text_view_fonts_set(GX_RICH_TEXT_VIEW *rich_view, GX_RICH_TEXT_FONTS *fonts);
 
+#endif
